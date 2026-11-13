@@ -1,0 +1,15 @@
+SRCDIR = .
+
+VPATH = $(SRCDIR)
+
+LOCAL_GNUEFI_CFLAGS  = -I$(SRCDIR) -I$(SRCDIR)/../include
+
+OBJS            = decompress_inflate.o
+TARGET          = libgzip.a
+
+all: $(TARGET)
+
+include $(SRCDIR)/../Make.common
+
+clean:
+	rm -f $(TARGET) *~ *.so $(OBJS) *.efi *.obj refind_*.txt refind_*.dll *.lib

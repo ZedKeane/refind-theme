@@ -1,0 +1,471 @@
+#include "mystrings.h"
+#include "lib.h"
+#include "screen.h"
+#include "../include/refit_call_wrapper.h"
+
+BOOLEAN StriSubCmp(IN CHAR16 *SmallStr, IN CHAR16 *BigStr) {
+    BOOLEAN Found = 0, Terminate = 0;
+    UINTN BigIndex = 0, SmallIndex = 0, BigStart = 0;
+
+    if (SmallStr && BigStr) {
+        while (!Terminate) {
+            if (BigStr[BigIndex] == '\0') {
+                Terminate = 1;
+            }
+            if (SmallStr[SmallIndex] == '\0') {
+                Found = 1;
+                Terminate = 1;
+            }
+            if ((SmallStr[SmallIndex] & ~0x20) == (BigStr[BigIndex] & ~0x20)) {
+                SmallIndex++;
+                BigIndex++;
+            } else {
+                SmallIndex = 0;
+                BigStart++;
+                BigIndex = BigStart;
+            }
+        }
+    }
+    return Found;
+}
+
+BOOLEAN MyStriCmp(IN CONST CHAR16 *FirstString, IN CONST CHAR16 *SecondString) {
+    if (FirstString && SecondString) {
+        while ((*FirstString != L'\0') && ((*FirstString & ~0x20) == (*SecondString & ~0x20))) {
+                FirstString++;
+                SecondString++;
+        }
+        return (*FirstString == *SecondString);
+    } else {
+        return FALSE;
+    }
+}
+
+CHAR16* MyStrStr (IN CHAR16  *String, IN CHAR16  *StrCharSet)
+{
+    CHAR16 *Src;
+    CHAR16 *Sub;
+
+    if ((String == NULL) || (StrCharSet == NULL))
+        return NULL;
+
+    Src = String;
+    Sub = StrCharSet;
+
+    while ((*String != L'\0') && (*StrCharSet != L'\0')) {
+        if (*String++ != *StrCharSet) {
+            String = ++Src;
+            StrCharSet = Sub;
+        } else {
+            StrCharSet++;
+        }
+    }
+    if (*StrCharSet == L'\0') {
+        return Src;
+    } else {
+        return NULL;
+    }
+}
+
+VOID ToLower(CHAR16 * MyString) {
+    UINTN i = 0;
+
+    if (MyString) {
+        while (MyString[i] != L'\0') {
+            if ((MyString[i] >= L'A') && (MyString[i] <= L'Z'))
+                MyString[i] = MyString[i] - L'A' + L'a';
+            i++;
+        }
+    }
+}
+
+VOID MergeStrings(IN OUT CHAR16 **First, IN CHAR16 *Second, CHAR16 AddChar) {
+    UINTN Length1 = 0, Length2 = 0;
+    CHAR16* NewString;
+
+    if (*First != NULL)
+        Length1 = StrLen(*First);
+    if (Second != NULL)
+        Length2 = StrLen(Second);
+    NewString = AllocatePool(sizeof(CHAR16) * (Length1 + Length2 + 2));
+    if (NewString != NULL) {
+        if ((*First != NULL) && (Length1 == 0)) {
+            MyFreePool(*First);
+            *First = NULL;
+        }
+        NewString[0] = L'\0';
+        if (*First != NULL) {
+            StrCat(NewString, *First);
+            if (AddChar) {
+                NewString[Length1] = AddChar;
+                NewString[Length1 + 1] = '\0';
+            }
+        }
+        if (Second != NULL)
+            StrCat(NewString, Second);
+        MyFreePool(*First);
+        *First = NewString;
+    } else {
+        Print(L"Error! Unable to allocate memory in MergeStrings()!\n");
+    }
+}
+
+VOID MergeWords(CHAR16 **MergeTo, CHAR16 *SourceString, CHAR16 AddChar) {
+    CHAR16 *Temp, *Word, *p;
+    BOOLEAN LineFinished = FALSE;
+
+    if (SourceString) {
+        Temp = Word = p = StrDuplicate(SourceString);
+        if (Temp) {
+            while (!LineFinished) {
+                if ((*p == L' ') || (*p == L':') || (*p == L'_') || (*p == L'-') || (*p == L'\0')) {
+                    if (*p == L'\0')
+                        LineFinished = TRUE;
+                    *p = L'\0';
+                    if (*Word != L'\0')
+                        MergeStrings(MergeTo, Word, AddChar);
+                    Word = p + 1;
+                }
+                p++;
+            }
+            MyFreePool(Temp);
+        } else {
+            Print(L"Error! Unable to allocate memory in MergeWords()!\n");
+        }
+    }
+}
+
+BOOLEAN LimitStringLength(CHAR16 *TheString, UINTN Limit) {
+    CHAR16    *SubString, *TempString;
+    UINTN     i;
+    BOOLEAN   HasChanged = FALSE;
+
+    SubString = MyStrStr(TheString, L"  ");
+    while (SubString != NULL) {
+        i = 0;
+        while (SubString[i] == L' ')
+            i++;
+        if (i >= StrLen(SubString)) {
+            SubString[0] = '\0';
+            HasChanged = TRUE;
+        } else {
+            TempString = StrDuplicate(&SubString[i]);
+            if (TempString != NULL) {
+                StrCpy(&SubString[1], TempString);
+                MyFreePool(TempString);
+                HasChanged = TRUE;
+            } else {
+
+                break;
+            }
+        }
+        SubString = MyStrStr(TheString, L"  ");
+    }
+
+    if (StrLen(TheString) > Limit) {
+        TheString[Limit] = '\0';
+        HasChanged = TRUE;
+    }
+
+    return HasChanged;
+}
+
+CHAR16 *FindNumbers(IN CHAR16 *InString) {
+    UINTN i = 0, StartOfElement, EndOfElement = 0, CopyLength;
+    CHAR16 *Found = NULL, *ExtraFound = NULL, *LookFor;
+
+    if (InString == NULL)
+        return NULL;
+
+    StartOfElement = StrLen(InString);
+
+    while ((ExtraFound == NULL) && (LookFor = FindCommaDelimited(GlobalConfig.ExtraKernelVersionStrings, i++))) {
+        if ((ExtraFound = MyStrStr(InString, LookFor))) {
+            StartOfElement = ExtraFound - InString;
+            EndOfElement = StartOfElement + StrLen(LookFor) - 1;
+        }
+        MyFreePool(LookFor);
+    }
+
+    for (i = 0; InString[i] != L'\0'; i++) {
+        if ((InString[i] >= L'0') && (InString[i] <= L'9')) {
+            if (StartOfElement > i)
+                StartOfElement = i;
+            if (EndOfElement < i)
+                EndOfElement = i;
+        }
+    }
+
+    if (EndOfElement > 0) {
+        if (EndOfElement >= StartOfElement) {
+            CopyLength = EndOfElement - StartOfElement + 1;
+            Found = StrDuplicate(&InString[StartOfElement]);
+            if (Found != NULL)
+                Found[CopyLength] = 0;
+        }
+    }
+    return (Found);
+}
+
+UINTN NumCharsInCommon(IN CHAR16* String1, IN CHAR16* String2) {
+    UINTN Count = 0;
+    if ((String1 == NULL) || (String2 == NULL))
+        return 0;
+    while ((String1[Count] != L'\0') && (String2[Count] != L'\0') && (String1[Count] == String2[Count]))
+        Count++;
+    return Count;
+}
+
+CHAR16 *FindCommaDelimited(IN CHAR16 *InString, IN UINTN Index) {
+    UINTN    StartPos = 0, CurPos = 0, InLength;
+    BOOLEAN  Found = FALSE;
+    CHAR16   *FoundString = NULL;
+
+    if (InString != NULL) {
+        InLength = StrLen(InString);
+
+        while ((Index > 0) && (CurPos < InLength)) {
+            if (InString[CurPos] == L',') {
+                Index--;
+                StartPos = CurPos + 1;
+            }
+            CurPos++;
+        }
+
+        while ((CurPos < InLength) && (!Found)) {
+            if (InString[CurPos] == L',')
+                Found = TRUE;
+            else
+                CurPos++;
+        }
+        if (Index == 0)
+            FoundString = StrDuplicate(&InString[StartPos]);
+        if (FoundString != NULL)
+            FoundString[CurPos - StartPos] = 0;
+    }
+    return (FoundString);
+}
+
+BOOLEAN DeleteItemFromCsvList(CHAR16 *ToDelete, CHAR16 *List) {
+    CHAR16 *Found, *Comma;
+
+    if ((ToDelete == NULL) || (List == NULL))
+        return FALSE;
+
+    if ((Found = MyStrStr(List, ToDelete)) != NULL) {
+        if ((Comma = MyStrStr(Found, L",")) == NULL) {
+
+            if (Found == List) {
+                List[0] = L'\0';
+            } else {
+                Found--;
+                Found[0] = L'\0';
+            }
+        } else {
+            StrCpy(Found, &Comma[1]);
+        }
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+}
+
+BOOLEAN IsIn(IN CHAR16 *SmallString, IN CHAR16 *List) {
+    UINTN     i = 0;
+    BOOLEAN   Found = FALSE;
+    CHAR16    *OneElement;
+
+    if (SmallString && List) {
+        while (!Found && (OneElement = FindCommaDelimited(List, i++))) {
+            if (MyStriCmp(OneElement, SmallString))
+                Found = TRUE;
+            MyFreePool(OneElement);
+        }
+    }
+    return Found;
+}
+
+BOOLEAN IsInSubstring(IN CHAR16 *BigString, IN CHAR16 *List) {
+    UINTN   i = 0, ElementLength;
+    BOOLEAN Found = FALSE;
+    CHAR16  *OneElement;
+
+    if (BigString && List) {
+        while (!Found && (OneElement = FindCommaDelimited(List, i++))) {
+            ElementLength = StrLen(OneElement);
+            if ((ElementLength <= StrLen(BigString)) &&
+                 (ElementLength > 0) &&
+                 (StriSubCmp(OneElement, BigString))) {
+                    Found = TRUE;
+            }
+            MyFreePool(OneElement);
+        }
+    }
+    return Found;
+}
+
+BOOLEAN ReplaceSubstring(IN OUT CHAR16 **MainString, IN CHAR16 *SearchString, IN CHAR16 *ReplString) {
+    BOOLEAN WasReplaced = FALSE;
+    CHAR16 *FoundSearchString = NULL, *NewString, *EndString;
+
+    if (MainString) {
+        if (MainString[0]) {
+            FoundSearchString = MyStrStr(*MainString, SearchString);
+        }
+    }
+    if (FoundSearchString) {
+        NewString = AllocateZeroPool(sizeof(CHAR16) * StrLen(*MainString));
+        if (NewString) {
+            EndString = &(FoundSearchString[StrLen(SearchString)]);
+            FoundSearchString[0] = L'\0';
+            if ((FoundSearchString > *MainString) && (FoundSearchString[-1] == L'%')) {
+                FoundSearchString[-1] = L'\0';
+                ReplString = SearchString;
+            }
+            StrCpy(NewString, *MainString);
+            MergeStrings(&NewString, ReplString, L'\0');
+            MergeStrings(&NewString, EndString, L'\0');
+            MyFreePool(MainString);
+            *MainString = NewString;
+            WasReplaced = TRUE;
+        }
+    }
+    return WasReplaced;
+}
+
+BOOLEAN IsValidHex(CHAR16 *Input) {
+    BOOLEAN IsHex = TRUE;
+    UINTN i = 0;
+
+    while ((Input[i] != L'\0') && IsHex) {
+        if (!(((Input[i] >= L'0') && (Input[i] <= L'9')) ||
+              ((Input[i] >= L'A') && (Input[i] <= L'F')) ||
+              ((Input[i] >= L'a') && (Input[i] <= L'f')))) {
+                IsHex = FALSE;
+        }
+        i++;
+    }
+    return IsHex;
+}
+
+UINT64 StrToHex(CHAR16 *Input, UINTN Pos, UINTN NumChars) {
+    UINT64 retval = 0x00;
+    UINTN  NumDone = 0, InputLength;
+    CHAR16 a;
+
+    if ((Input == NULL) || (NumChars == 0) || (NumChars > 16)) {
+        return 0;
+    }
+
+    InputLength = StrLen(Input);
+    while ((Pos <= InputLength) && (NumDone < NumChars)) {
+        a = Input[Pos];
+        if ((a >= '0') && (a <= '9')) {
+            retval *= 0x10;
+            retval += (a - '0');
+            NumDone++;
+        }
+        if ((a >= 'a') && (a <= 'f')) {
+            retval *= 0x10;
+            retval += (a - 'a' + 0x0a);
+            NumDone++;
+        }
+        if ((a >= 'A') && (a <= 'F')) {
+            retval *= 0x10;
+            retval += (a - 'A' + 0x0a);
+            NumDone++;
+        }
+        Pos++;
+    }
+    return retval;
+}
+
+BOOLEAN IsGuid(CHAR16 *UnknownString) {
+    UINTN   Length, i;
+    BOOLEAN retval = TRUE;
+    CHAR16  a;
+
+    if (UnknownString == NULL)
+        return FALSE;
+
+    Length = StrLen(UnknownString);
+    if (Length != 36)
+        return FALSE;
+
+    for (i = 0; i < Length; i++) {
+        a = UnknownString[i];
+        if ((i == 8) || (i == 13) || (i == 18) || (i == 23)) {
+            if (a != L'-')
+                retval = FALSE;
+        } else if (((a < L'a') || (a > L'f')) &&
+                   ((a < L'A') || (a > L'F')) &&
+                   ((a < L'0') && (a > L'9'))) {
+            retval = FALSE;
+        }
+    }
+    return retval;
+}
+
+CHAR16 * GuidAsString(EFI_GUID *GuidData) {
+    CHAR16 *TheString;
+
+    TheString = AllocateZeroPool(42 * sizeof(CHAR16));
+    if (GuidData && (TheString != 0)) {
+        SPrint (TheString, 82, L"%08x-%04x-%04x-%02x%02x-%02x%02x%02x%02x%02x%02x",
+                (UINTN)GuidData->Data1, (UINTN)GuidData->Data2, (UINTN)GuidData->Data3,
+                (UINTN)GuidData->Data4[0], (UINTN)GuidData->Data4[1], (UINTN)GuidData->Data4[2],
+                (UINTN)GuidData->Data4[3], (UINTN)GuidData->Data4[4], (UINTN)GuidData->Data4[5],
+                (UINTN)GuidData->Data4[6], (UINTN)GuidData->Data4[7]);
+    }
+    return TheString;
+}
+
+EFI_GUID StringAsGuid(CHAR16 * InString) {
+    EFI_GUID  Guid = NULL_GUID_VALUE;
+
+    if (!IsGuid(InString)) {
+        return Guid;
+    }
+
+    Guid.Data1 = (UINT32) StrToHex(InString, 0, 8);
+    Guid.Data2 = (UINT16) StrToHex(InString, 9, 4);
+    Guid.Data3 = (UINT16) StrToHex(InString, 14, 4);
+    Guid.Data4[0] = (UINT8) StrToHex(InString, 19, 2);
+    Guid.Data4[1] = (UINT8) StrToHex(InString, 21, 2);
+    Guid.Data4[2] = (UINT8) StrToHex(InString, 23, 2);
+    Guid.Data4[3] = (UINT8) StrToHex(InString, 26, 2);
+    Guid.Data4[4] = (UINT8) StrToHex(InString, 28, 2);
+    Guid.Data4[5] = (UINT8) StrToHex(InString, 30, 2);
+    Guid.Data4[6] = (UINT8) StrToHex(InString, 32, 2);
+    Guid.Data4[7] = (UINT8) StrToHex(InString, 34, 2);
+
+    return Guid;
+}
+
+CHAR16 *GetTimeString(VOID) {
+    CHAR16  *TimeStr = NULL;
+    EFI_TIME CurrentTime;
+    EFI_STATUS Status = EFI_SUCCESS;
+
+    Status = refit_call2_wrapper(ST->RuntimeServices->GetTime, &CurrentTime, NULL);
+    if (EFI_ERROR(Status)) {
+        TimeStr = PoolPrint(L"unknown time");
+    } else {
+        TimeStr = PoolPrint(L"%02d:%02d:%02d",
+                            CurrentTime.Hour,
+                            CurrentTime.Minute,
+                            CurrentTime.Second);
+    }
+    return TimeStr;
+}
+
+VOID DeleteStringList(STRING_LIST *StringList) {
+    STRING_LIST *Current = StringList, *Previous;
+
+    while (Current != NULL) {
+        MyFreePool(Current->Value);
+        Previous = Current;
+        Current = Current->Next;
+        MyFreePool(Previous);
+    }
+}

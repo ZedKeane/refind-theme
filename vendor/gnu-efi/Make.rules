@@ -1,0 +1,30 @@
+.SECONDARY:
+
+%.efi: %.so
+	$(OBJCOPY) -j .text -j .sdata -j .data -j .dynamic -j .rodata -j .rel \
+		    -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+		    -j .areloc -j .reloc $(FORMAT) $*.so $@
+
+%.efi.debug: %.so
+	$(OBJCOPY) -j .debug_info -j .debug_abbrev -j .debug_aranges \
+		-j .debug_line -j .debug_str -j .debug_ranges \
+		-j .note.gnu.build-id \
+		$(FORMAT) $*.so $@
+
+%.so: %.o
+	$(LD) $(LDFLAGS) $^ -o $@ $(LOADLIBES)
+
+%.o: %.c
+	$(CC) $(INCDIR) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+%.s: %.c
+	$(CC) $(INCDIR) $(CFLAGS) $(CPPFLAGS) -S $< -o $@
+
+%.i: %.c
+	$(CC) $(INCDIR) $(CFLAGS) $(CPPFLAGS) -E $< -o $@
+
+%.o: %.S
+	$(CC) $(INCDIR) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+%.s: %.S
+	$(CC) $(INCDIR) $(CFLAGS) $(CPPFLAGS) -E $< -o $@

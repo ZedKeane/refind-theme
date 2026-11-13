@@ -1,0 +1,67 @@
+#ifndef _PIFLASH64_H
+#define _PIFLASH64_H
+
+#define IFLASH64_PROTOCOL_PROTOCOL \
+    { 0x65cba110, 0x74ab, 0x11d3, 0xbb, 0x89, 0x0, 0x80, 0xc7, 0x3c, 0x88, 0x81 };
+
+typedef
+EFI_STATUS
+(EFIAPI *UNLOCK_FLASH_API)(
+    IN struct _IFLASH64_PROTOCOL_INTERFACE  *This
+    );
+
+typedef
+EFI_STATUS
+(EFIAPI *LOCK_FLASH_API)(
+    IN struct _IFLASH64_PROTOCOL_INTERFACE  *This
+    );
+
+typedef
+EFI_STATUS
+(EFIAPI *UTILITY_PROGRESS_API)(
+    IN struct _IFLASH64_PROTOCOL_INTERFACE  *This,
+    IN  UINTN                               Token,
+    IN  EFI_STATUS                          ErrorStatus,
+    IN  CHAR16                              *String,    OPTIONAL
+    IN  UINTN                               *Attributes OPTIONAL
+    );
+
+#define IFLASH_TOKEN_IFLASHSTART    0xB0
+#define IFLASH_TOKEN_READINGFILE    0xB1
+#define IFLASH_TOKEN_INITVPP        0xB2
+#define IFLASH_TOKEN_DISABLEVPP     0x10
+#define IFLASH_TOKEN_FLASHUNLOCK    0xB3
+#define IFLASH_TOKEN_FLASHERASE     0xB4
+#define IFLASH_TOKEN_FLASHPROGRAM   0xB5
+#define IFLASH_TOKEN_FLASHVERIFY    0xB6
+#define IFLASH_TOKEN_UPDATESUCCES   0xB7
+
+#define IFLASH_TOKEN_PROGRESS_READINGFILE   0x11
+#define IFLASH_TOKEN_PROGRESS_FLASHUNLOCK   0x13
+#define IFLASH_TOKEN_PROGRESS_FLASHERASE    0x14
+#define IFLASH_TOKEN_PROGRESS_FLASHPROGRAM  0x15
+#define IFLASH_TOKEN_PROGRESS_FLASHVERIFY   0x16
+
+#define IFLASH_TOKEN_READINGFILE_ER 0xB8
+#define IFLASH_TOKEN_INITVPP_ER     0xB9
+#define IFLASH_TOKEN_FLASHUNLOCK_ER 0xBA
+#define IFLASH_TOKEN_FLASHERASE_ER  0xBB
+#define IFLASH_TOKEN_FLASHVERIFY_ER 0xBC
+#define IFLASH_TOKEN_FLASHPROG_ER   0xBD
+
+#define IFLASH_TABLE_END            0x00
+
+#define IFLASH_PI_MAJOR_VERSION 0x01
+
+#define IFLASH_PI_MINOR_VERSION 0x01
+
+typedef struct _IFLASH64_PROTOCOL_INTERFACE {
+    UINT32                  MajorVersion;
+    UINT32                  MinorVersion;
+    UNLOCK_FLASH_API        UnlockFlash;
+    LOCK_FLASH_API          LockFlash;
+    UTILITY_PROGRESS_API    Progress;
+
+} IFLASH64_PROTOCOL_INTERFACE;
+
+#endif

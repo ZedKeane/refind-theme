@@ -1,0 +1,57 @@
+[Defines]
+  INF_VERSION                   = 0x00010005
+  BASE_NAME                     = ext4
+  FILE_GUID                     = FD60D756-A4A9-4B87-BABF-E246DA740D4C
+  MODULE_TYPE                   = UEFI_DRIVER
+  EDK_RELEASE_VERSION		= 0x00020000
+  EFI_SPECIFICATION_VERSION	= 0x00010000
+  VERSION_STRING                = 1.0
+  ENTRY_POINT                   = fsw_efi_main
+  FSTYPE                        = ext4
+
+[Sources]
+  fsw_efi.c
+  fsw_ext4.c
+  fsw_core.c
+  fsw_efi.c
+  fsw_lib.c
+  fsw_efi_lib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  IntelFrameworkPkg/IntelFrameworkPkg.dec
+  IntelFrameworkModulePkg/IntelFrameworkModulePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  DxeServicesLib
+  DxeServicesTableLib
+  MemoryAllocationLib
+
+[LibraryClasses.AARCH64]
+  BaseStackCheckLib
+
+  CompilerIntrinsicsLib
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+
+[BuildOptions.IA32]
+  XCODE:*_*_*_CC_FLAGS = -Os  -DEFI32 -D__MAKEWITH_TIANO -DFSTYPE=ext4
+  GCC:*_*_*_CC_FLAGS = -Os -DEFI32 -D__MAKEWITH_TIANO -DFSTYPE=ext4
+
+[BuildOptions.X64]
+  XCODE:*_*_*_CC_FLAGS = -Os  -DEFIX64 -D__MAKEWITH_TIANO -DFSTYPE=ext4
+  GCC:*_*_*_CC_FLAGS = -Os -DEFIX64 -D__MAKEWITH_TIANO -DFSTYPE=ext4
+
+[BuildOptions.AARCH64]
+  XCODE:*_*_*_CC_FLAGS = -Os  -DEFIAARCH64 -D__MAKEWITH_TIANO -DFSTYPE=ext4
+  GCC:*_*_*_CC_FLAGS = -Os -DEFIAARCH64 -D__MAKEWITH_TIANO -DFSTYPE=ext4

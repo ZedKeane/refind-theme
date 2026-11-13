@@ -1,0 +1,35 @@
+.text
+	.globl	setjmp
+#ifndef __MINGW32__
+	.type setjmp, @function
+#else
+	.def setjmp; .scl 2; .type 32; .endef
+#endif
+setjmp:
+	pop	%ecx
+	movl	(%esp), %edx
+	movl	%ebx, (%edx)
+	movl	%esi, 4(%edx)
+	movl	%edi, 8(%edx)
+	movl	%ebp, 12(%edx)
+	movl	%esp, 16(%edx)
+	xorl	%eax, %eax
+	jmp	*%ecx
+
+	.globl	longjmp
+#ifndef __MINGW32__
+	.type	longjmp, @function
+#else
+	.def longjmp; .scl 2; .type 32; .endef
+#endif
+longjmp:
+	pop	%eax
+	pop	%edx
+	pop	%eax
+	movl	(%edx), %ebx
+	movl	4(%edx), %esi
+	movl	8(%edx), %edi
+
+#if defined(__ELF__) && defined(__linux__)
+	.section .note.GNU-stack,"",%progbits
+#endif

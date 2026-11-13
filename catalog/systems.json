@@ -1,0 +1,4193 @@
+{
+  "schema_version": 1,
+  "systems": [
+    {
+      "id": "windows",
+      "title": "Windows",
+      "family": "windows",
+      "parent": null,
+      "icon": {
+        "key": "windows",
+        "aliases": [
+          "win",
+          "win8",
+          "windows8"
+        ],
+        "preferred_logo": "@windows",
+        "asset": "assets/logos/local-windows.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [
+          "microsoft",
+          "windows"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Windows"
+        ],
+        "filenames": [
+          "bootmgfw.efi",
+          "bkpbootmgfw.efi",
+          "bootmgr.efi",
+          "cdboot.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "windows11",
+      "title": "Windows 11",
+      "family": "windows",
+      "parent": "windows",
+      "icon": {
+        "key": "windows11",
+        "aliases": [],
+        "preferred_logo": "@windows",
+        "asset": "assets/logos/local-windows.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "Windows 11",
+          "Win11",
+          "windows11"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "windows10",
+      "title": "Windows 10",
+      "family": "windows",
+      "parent": "windows",
+      "icon": {
+        "key": "windows10",
+        "aliases": [],
+        "preferred_logo": "@windows",
+        "asset": "assets/logos/local-windows.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "Windows 10",
+          "Win10",
+          "windows10"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "windows7",
+      "title": "Windows 7",
+      "family": "windows",
+      "parent": "windows",
+      "icon": {
+        "key": "windows7",
+        "aliases": [],
+        "preferred_logo": "@windows",
+        "asset": "assets/logos/local-windows.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "Windows 7",
+          "Win7",
+          "windows7"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "windowsserver",
+      "title": "Windows Server",
+      "family": "windows",
+      "parent": "windows",
+      "icon": {
+        "key": "windowsserver",
+        "aliases": [],
+        "preferred_logo": "@windows",
+        "asset": "assets/logos/local-windows.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "Windows Server",
+          "windowsserver"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "macos",
+      "title": "macOS",
+      "family": "macos",
+      "parent": null,
+      "icon": {
+        "key": "mac",
+        "aliases": [
+          "oc",
+          "opencore",
+          "osx",
+          "apple"
+        ],
+        "preferred_logo": "apple",
+        "asset": "assets/logos/simpleicons-apple.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "oc",
+          "opencore",
+          "mac"
+        ],
+        "release_ids": [
+          "macos"
+        ],
+        "labels": [
+          "macOS",
+          "Mac OS X",
+          "Hackintosh"
+        ],
+        "filenames": [
+          "OpenCore.efi"
+        ],
+        "path_suffixes": [
+          "/System/Library/CoreServices/boot.efi"
+        ],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "linux",
+      "title": "Linux",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "linux",
+        "aliases": [
+          "legacy"
+        ],
+        "preferred_logo": "linux",
+        "asset": "assets/logos/simpleicons-linux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [
+          "linux"
+        ],
+        "labels": [
+          "Linux",
+          "GNU/Linux"
+        ],
+        "filenames": [
+          "shimx64.efi",
+          "shim.efi",
+          "linuxx64.efi",
+          "grubx64.efi",
+          "grub.efi",
+          "grubaa64.efi",
+          "grubia32.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [
+          "vmlinuz",
+          "bzimage"
+        ],
+        "generic_loader": true
+      }
+    },
+    {
+      "id": "ubuntu",
+      "title": "Ubuntu",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "ubuntu",
+        "aliases": [
+          "trusty",
+          "xenial",
+          "bionic",
+          "artful",
+          "zesty",
+          "ubuntugnome"
+        ],
+        "preferred_logo": "ubuntu",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "ubuntu"
+        ],
+        "release_ids": [
+          "ubuntu"
+        ],
+        "labels": [
+          "Ubuntu"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "debian",
+      "title": "Debian",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "debian",
+        "aliases": [],
+        "preferred_logo": "debian",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "debian"
+        ],
+        "release_ids": [
+          "debian"
+        ],
+        "labels": [
+          "Debian"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "fedora",
+      "title": "Fedora",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "fedora",
+        "aliases": [],
+        "preferred_logo": "fedora",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "fedora"
+        ],
+        "release_ids": [
+          "fedora"
+        ],
+        "labels": [
+          "Fedora"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "rhel",
+      "title": "Red Hat",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "redhat",
+        "aliases": [
+          "rhel"
+        ],
+        "preferred_logo": "redhat",
+        "asset": "assets/logos/simpleicons-redhat.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "redhat",
+          "rhel"
+        ],
+        "release_ids": [
+          "rhel"
+        ],
+        "labels": [
+          "Red Hat",
+          "RHEL",
+          "Red Hat Enterprise Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "rocky",
+      "title": "Rocky Linux",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "rocky",
+        "aliases": [],
+        "preferred_logo": "rockylinux",
+        "asset": "assets/logos/simpleicons-rockylinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "rocky",
+          "rockylinux"
+        ],
+        "release_ids": [
+          "rocky"
+        ],
+        "labels": [
+          "Rocky Linux",
+          "rocky"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "almalinux",
+      "title": "AlmaLinux",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "almalinux",
+        "aliases": [],
+        "preferred_logo": "almalinux",
+        "asset": "assets/logos/simpleicons-almalinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "almalinux",
+          "alma"
+        ],
+        "release_ids": [
+          "almalinux"
+        ],
+        "labels": [
+          "AlmaLinux",
+          "Alma Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "centos",
+      "title": "CentOS",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "centos",
+        "aliases": [],
+        "preferred_logo": "centos",
+        "asset": "assets/logos/simpleicons-centos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "centos"
+        ],
+        "release_ids": [
+          "centos"
+        ],
+        "labels": [
+          "CentOS",
+          "CentOS Stream"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "oraclelinux",
+      "title": "Oracle Linux",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "oraclelinux",
+        "aliases": [],
+        "preferred_logo": "oracle",
+        "asset": "assets/logos/dashboard-oracle.svg",
+        "source": "dashboard-icons",
+        "license": "Apache-2.0",
+        "source_commit": "d767d7327db7f8ebd3715b552523f61889eea41c"
+      },
+      "match": {
+        "directories": [
+          "oracle",
+          "oraclelinux"
+        ],
+        "release_ids": [
+          "ol"
+        ],
+        "labels": [
+          "Oracle Linux",
+          "oraclelinux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "opensuse",
+      "title": "openSUSE",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "opensuse",
+        "aliases": [],
+        "preferred_logo": "opensuse",
+        "asset": "assets/logos/simpleicons-opensuse.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "opensuse"
+        ],
+        "release_ids": [
+          "opensuse"
+        ],
+        "labels": [
+          "openSUSE"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "tumbleweed",
+      "title": "openSUSE Tumbleweed",
+      "family": "linux",
+      "parent": "opensuse",
+      "icon": {
+        "key": "tumbleweed",
+        "aliases": [
+          "opensuse-tumbleweed"
+        ],
+        "preferred_logo": "opensuse",
+        "asset": "assets/logos/simpleicons-opensuse.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "tumbleweed"
+        ],
+        "release_ids": [
+          "opensuse-tumbleweed"
+        ],
+        "labels": [
+          "openSUSE Tumbleweed",
+          "Tumbleweed"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "leap",
+      "title": "openSUSE Leap",
+      "family": "linux",
+      "parent": "opensuse",
+      "icon": {
+        "key": "leap",
+        "aliases": [
+          "opensuse-leap"
+        ],
+        "preferred_logo": "opensuse",
+        "asset": "assets/logos/simpleicons-opensuse.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [
+          "opensuse-leap"
+        ],
+        "labels": [
+          "openSUSE Leap",
+          "leap"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "sles",
+      "title": "SUSE Enterprise",
+      "family": "linux",
+      "parent": "opensuse",
+      "icon": {
+        "key": "sles",
+        "aliases": [],
+        "preferred_logo": "suse",
+        "asset": "assets/logos/simpleicons-suse.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "suse",
+          "sles"
+        ],
+        "release_ids": [
+          "sles",
+          "sled"
+        ],
+        "labels": [
+          "SUSE Enterprise",
+          "SUSE Linux Enterprise",
+          "sles"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "arch",
+      "title": "Arch Linux",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "arch",
+        "aliases": [],
+        "preferred_logo": "archlinux",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "arch",
+          "archlinux"
+        ],
+        "release_ids": [
+          "arch"
+        ],
+        "labels": [
+          "Arch Linux",
+          "arch"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "manjaro",
+      "title": "Manjaro",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "manjaro",
+        "aliases": [],
+        "preferred_logo": "manjaro",
+        "asset": "assets/logos/simpleicons-manjaro.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "manjaro"
+        ],
+        "release_ids": [
+          "manjaro"
+        ],
+        "labels": [
+          "Manjaro"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "endeavouros",
+      "title": "EndeavourOS",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "endeavouros",
+        "aliases": [],
+        "preferred_logo": "endeavouros",
+        "asset": "assets/logos/simpleicons-endeavouros.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "endeavouros",
+          "endeavour"
+        ],
+        "release_ids": [
+          "endeavouros"
+        ],
+        "labels": [
+          "EndeavourOS",
+          "Endeavour OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "garuda",
+      "title": "Garuda Linux",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "garuda",
+        "aliases": [],
+        "preferred_logo": "garudalinux",
+        "asset": "assets/logos/simpleicons-garudalinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "garuda"
+        ],
+        "release_ids": [
+          "garuda"
+        ],
+        "labels": [
+          "Garuda Linux",
+          "garuda"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "cachyos",
+      "title": "CachyOS",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "cachyos",
+        "aliases": [],
+        "preferred_logo": "cachyos",
+        "asset": "assets/logos/simpleicons-cachyos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "cachyos"
+        ],
+        "release_ids": [
+          "cachyos"
+        ],
+        "labels": [
+          "CachyOS",
+          "Cachy OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "artix",
+      "title": "Artix Linux",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "artix",
+        "aliases": [],
+        "preferred_logo": "artixlinux",
+        "asset": "assets/logos/simpleicons-artixlinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "artix"
+        ],
+        "release_ids": [
+          "artix"
+        ],
+        "labels": [
+          "Artix Linux",
+          "artix"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "arcolinux",
+      "title": "ArcoLinux",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "arcolinux",
+        "aliases": [],
+        "preferred_logo": "arcolinux",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "arch"
+      },
+      "match": {
+        "directories": [
+          "arcolinux"
+        ],
+        "release_ids": [
+          "arcolinux"
+        ],
+        "labels": [
+          "ArcoLinux",
+          "Arco Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "gentoo",
+      "title": "Gentoo",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "gentoo",
+        "aliases": [],
+        "preferred_logo": "gentoo",
+        "asset": "assets/logos/simpleicons-gentoo.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "gentoo"
+        ],
+        "release_ids": [
+          "gentoo"
+        ],
+        "labels": [
+          "Gentoo"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "nixos",
+      "title": "NixOS",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "nixos",
+        "aliases": [],
+        "preferred_logo": "nixos",
+        "asset": "assets/logos/simpleicons-nixos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "nixos"
+        ],
+        "release_ids": [
+          "nixos"
+        ],
+        "labels": [
+          "NixOS",
+          "Nix OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "guix",
+      "title": "GNU Guix",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "guix",
+        "aliases": [],
+        "preferred_logo": "gnu",
+        "asset": "assets/logos/simpleicons-gnu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "guix"
+        ],
+        "release_ids": [
+          "guix"
+        ],
+        "labels": [
+          "GNU Guix",
+          "Guix System",
+          "guix"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "void",
+      "title": "Void Linux",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "void",
+        "aliases": [],
+        "preferred_logo": "voidlinux",
+        "asset": "assets/logos/simpleicons-voidlinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "void"
+        ],
+        "release_ids": [
+          "void"
+        ],
+        "labels": [
+          "Void Linux",
+          "void"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "alpine",
+      "title": "Alpine Linux",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "alpine",
+        "aliases": [],
+        "preferred_logo": "alpinelinux",
+        "asset": "assets/logos/simpleicons-alpinelinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "alpine"
+        ],
+        "release_ids": [
+          "alpine"
+        ],
+        "labels": [
+          "Alpine Linux",
+          "alpine"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "slackware",
+      "title": "Slackware",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "slackware",
+        "aliases": [],
+        "preferred_logo": "slackware",
+        "asset": "assets/logos/simpleicons-slackware.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "slackware"
+        ],
+        "release_ids": [
+          "slackware"
+        ],
+        "labels": [
+          "Slackware"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "solus",
+      "title": "Solus",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "solus",
+        "aliases": [],
+        "preferred_logo": "solus",
+        "asset": "assets/logos/simpleicons-solus.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "solus"
+        ],
+        "release_ids": [
+          "solus"
+        ],
+        "labels": [
+          "Solus"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "mageia",
+      "title": "Mageia",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "mageia",
+        "aliases": [],
+        "preferred_logo": "mageia",
+        "asset": "assets/logos/refind-mageia.png",
+        "source": "refind",
+        "license": "GPL-3.0-or-later",
+        "source_commit": "cf542da"
+      },
+      "match": {
+        "directories": [
+          "mageia"
+        ],
+        "release_ids": [
+          "mageia"
+        ],
+        "labels": [
+          "Mageia"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openmandriva",
+      "title": "OpenMandriva",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "openmandriva",
+        "aliases": [],
+        "preferred_logo": "openmandriva",
+        "asset": "assets/logos/minimal-mandriva.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "openmandriva"
+        ],
+        "release_ids": [
+          "openmandriva"
+        ],
+        "labels": [
+          "OpenMandriva",
+          "Open Mandriva"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "pclinuxos",
+      "title": "PCLinuxOS",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "pclinuxos",
+        "aliases": [],
+        "preferred_logo": "pclinuxos",
+        "asset": "assets/logos/minimal-pclinuxos.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "pclinuxos"
+        ],
+        "release_ids": [
+          "pclinuxos"
+        ],
+        "labels": [
+          "PCLinuxOS",
+          "PC Linux OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "linuxmint",
+      "title": "Linux Mint",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "linuxmint",
+        "aliases": [],
+        "preferred_logo": "linuxmint",
+        "asset": "assets/logos/simpleicons-linuxmint.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "linuxmint",
+          "mint"
+        ],
+        "release_ids": [
+          "linuxmint"
+        ],
+        "labels": [
+          "Linux Mint",
+          "Mint",
+          "linuxmint"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "lmde",
+      "title": "LMDE",
+      "family": "linux",
+      "parent": "linuxmint",
+      "icon": {
+        "key": "lmde",
+        "aliases": [],
+        "preferred_logo": "linuxmint",
+        "asset": "assets/logos/simpleicons-linuxmint.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "lmde"
+        ],
+        "release_ids": [
+          "lmde"
+        ],
+        "labels": [
+          "LMDE"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "kubuntu",
+      "title": "Kubuntu",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "kubuntu",
+        "aliases": [],
+        "preferred_logo": "kubuntu",
+        "asset": "assets/logos/simpleicons-kubuntu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "kubuntu"
+        ],
+        "release_ids": [
+          "kubuntu"
+        ],
+        "labels": [
+          "Kubuntu"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "xubuntu",
+      "title": "Xubuntu",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "xubuntu",
+        "aliases": [],
+        "preferred_logo": "xubuntu",
+        "asset": "assets/logos/simpleicons-xubuntu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "xubuntu"
+        ],
+        "release_ids": [
+          "xubuntu"
+        ],
+        "labels": [
+          "Xubuntu"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "lubuntu",
+      "title": "Lubuntu",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "lubuntu",
+        "aliases": [],
+        "preferred_logo": "lubuntu",
+        "asset": "assets/logos/simpleicons-lubuntu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "lubuntu"
+        ],
+        "release_ids": [
+          "lubuntu"
+        ],
+        "labels": [
+          "Lubuntu"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntumate",
+      "title": "Ubuntu MATE",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntumate",
+        "aliases": [],
+        "preferred_logo": "ubuntumate",
+        "asset": "assets/logos/simpleicons-ubuntumate.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "ubuntumate",
+          "ubuntu-mate"
+        ],
+        "release_ids": [
+          "ubuntu-mate"
+        ],
+        "labels": [
+          "Ubuntu MATE",
+          "ubuntumate"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntubudgie",
+      "title": "Ubuntu Budgie",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntubudgie",
+        "aliases": [],
+        "preferred_logo": "ubuntubudgie",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "ubuntubudgie"
+        ],
+        "release_ids": [
+          "ubuntu-budgie"
+        ],
+        "labels": [
+          "Ubuntu Budgie",
+          "ubuntubudgie"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntustudio",
+      "title": "Ubuntu Studio",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntustudio",
+        "aliases": [],
+        "preferred_logo": "ubuntustudio",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "ubuntustudio"
+        ],
+        "release_ids": [
+          "ubuntustudio"
+        ],
+        "labels": [
+          "Ubuntu Studio",
+          "ubuntustudio"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntucinnamon",
+      "title": "Ubuntu Cinnamon",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntucinnamon",
+        "aliases": [],
+        "preferred_logo": "ubuntucinnamon",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "ubuntucinnamon"
+        ],
+        "release_ids": [
+          "ubuntu-cinnamon"
+        ],
+        "labels": [
+          "Ubuntu Cinnamon",
+          "ubuntucinnamon"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntucore",
+      "title": "Ubuntu Core",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntucore",
+        "aliases": [],
+        "preferred_logo": "ubuntu",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "ubuntucore"
+        ],
+        "release_ids": [
+          "ubuntu-core"
+        ],
+        "labels": [
+          "Ubuntu Core",
+          "ubuntucore"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "popos",
+      "title": "Pop!_OS",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "popos",
+        "aliases": [
+          "pop"
+        ],
+        "preferred_logo": "popos",
+        "asset": "assets/logos/simpleicons-popos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "pop-os",
+          "pop_os",
+          "popos"
+        ],
+        "release_ids": [
+          "pop"
+        ],
+        "labels": [
+          "Pop!_OS",
+          "Pop OS",
+          "PopOS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "zorin",
+      "title": "Zorin OS",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "zorin",
+        "aliases": [],
+        "preferred_logo": "zorin",
+        "asset": "assets/logos/simpleicons-zorin.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "zorin"
+        ],
+        "release_ids": [
+          "zorin"
+        ],
+        "labels": [
+          "Zorin OS",
+          "zorin"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "elementary",
+      "title": "elementary OS",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "elementary",
+        "aliases": [],
+        "preferred_logo": "elementary",
+        "asset": "assets/logos/simpleicons-elementary.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "elementary"
+        ],
+        "release_ids": [
+          "elementary"
+        ],
+        "labels": [
+          "elementary OS",
+          "elementary"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "linuxlite",
+      "title": "Linux Lite",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "linuxlite",
+        "aliases": [],
+        "preferred_logo": "linuxlite",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "linuxlite"
+        ],
+        "release_ids": [
+          "linuxlite"
+        ],
+        "labels": [
+          "Linux Lite",
+          "linuxlite"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "tuxedo",
+      "title": "TUXEDO OS",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "tuxedo",
+        "aliases": [],
+        "preferred_logo": "tuxedocomputers",
+        "asset": "assets/logos/simpleicons-tuxedocomputers.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "tuxedo"
+        ],
+        "release_ids": [
+          "tuxedo"
+        ],
+        "labels": [
+          "TUXEDO OS",
+          "tuxedo"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "neon",
+      "title": "KDE neon",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "neon",
+        "aliases": [],
+        "preferred_logo": "kde",
+        "asset": "assets/logos/simpleicons-kde.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "neon"
+        ],
+        "release_ids": [
+          "neon"
+        ],
+        "labels": [
+          "KDE neon",
+          "neon"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "deepin",
+      "title": "deepin",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "deepin",
+        "aliases": [],
+        "preferred_logo": "deepin",
+        "asset": "assets/logos/simpleicons-deepin.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "deepin"
+        ],
+        "release_ids": [
+          "deepin"
+        ],
+        "labels": [
+          "deepin",
+          "深度操作系统"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "uos",
+      "title": "UnionTech UOS",
+      "family": "linux",
+      "parent": "deepin",
+      "icon": {
+        "key": "uos",
+        "aliases": [],
+        "preferred_logo": "deepin",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612",
+        "wordmark": "UOS"
+      },
+      "match": {
+        "directories": [
+          "uos",
+          "uniontech"
+        ],
+        "release_ids": [
+          "uos"
+        ],
+        "labels": [
+          "UnionTech UOS",
+          "UOS",
+          "统信UOS",
+          "统信操作系统"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openkylin",
+      "title": "openKylin",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "openkylin",
+        "aliases": [],
+        "preferred_logo": "openkylin",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "openKylin"
+      },
+      "match": {
+        "directories": [
+          "openkylin"
+        ],
+        "release_ids": [
+          "openkylin"
+        ],
+        "labels": [
+          "openKylin",
+          "open Kylin",
+          "开放麒麟"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ubuntukylin",
+      "title": "Ubuntu Kylin",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "ubuntukylin",
+        "aliases": [],
+        "preferred_logo": "ubuntukylin",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "ubuntukylin"
+        ],
+        "release_ids": [
+          "ubuntukylin"
+        ],
+        "labels": [
+          "Ubuntu Kylin",
+          "ubuntukylin",
+          "优麒麟"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "kylin",
+      "title": "Kylin Linux",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "kylin",
+        "aliases": [],
+        "preferred_logo": "@kylin",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "Kylin"
+      },
+      "match": {
+        "directories": [
+          "kylin"
+        ],
+        "release_ids": [
+          "kylin"
+        ],
+        "labels": [
+          "Kylin Linux",
+          "kylin",
+          "银河麒麟"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openeuler",
+      "title": "openEuler",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "openeuler",
+        "aliases": [],
+        "preferred_logo": "openeuler",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "openEuler"
+      },
+      "match": {
+        "directories": [
+          "openeuler"
+        ],
+        "release_ids": [
+          "openEuler",
+          "openeuler"
+        ],
+        "labels": [
+          "openEuler",
+          "open Euler",
+          "开源欧拉"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "anolis",
+      "title": "Anolis OS",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "anolis",
+        "aliases": [],
+        "preferred_logo": "anolisos",
+        "asset": "assets/logos/simpleicons-redhat.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "rhel"
+      },
+      "match": {
+        "directories": [
+          "anolis"
+        ],
+        "release_ids": [
+          "anolis"
+        ],
+        "labels": [
+          "Anolis OS",
+          "anolis",
+          "龙蜥操作系统"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "opencloudos",
+      "title": "OpenCloudOS",
+      "family": "linux",
+      "parent": "rhel",
+      "icon": {
+        "key": "opencloudos",
+        "aliases": [],
+        "preferred_logo": "opencloudos",
+        "asset": "assets/logos/simpleicons-redhat.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "rhel"
+      },
+      "match": {
+        "directories": [
+          "opencloudos"
+        ],
+        "release_ids": [
+          "opencloudos"
+        ],
+        "labels": [
+          "OpenCloudOS",
+          "Open Cloud OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "endless",
+      "title": "Endless OS",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "endless",
+        "aliases": [],
+        "preferred_logo": "endless",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "debian"
+      },
+      "match": {
+        "directories": [
+          "endless"
+        ],
+        "release_ids": [
+          "endless"
+        ],
+        "labels": [
+          "Endless OS",
+          "endless"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "vanilla",
+      "title": "Vanilla OS",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "vanilla",
+        "aliases": [],
+        "preferred_logo": "vanillaos",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "Vanilla"
+      },
+      "match": {
+        "directories": [
+          "vanilla"
+        ],
+        "release_ids": [
+          "vanilla"
+        ],
+        "labels": [
+          "Vanilla OS",
+          "vanilla"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "blendos",
+      "title": "blendOS",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "blendos",
+        "aliases": [],
+        "preferred_logo": "blendos",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "arch"
+      },
+      "match": {
+        "directories": [
+          "blendos"
+        ],
+        "release_ids": [
+          "blend"
+        ],
+        "labels": [
+          "blendOS",
+          "blend OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "nobara",
+      "title": "Nobara Linux",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "nobara",
+        "aliases": [],
+        "preferred_logo": "nobaralinux",
+        "asset": "assets/logos/simpleicons-nobaralinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "nobara"
+        ],
+        "release_ids": [
+          "nobara"
+        ],
+        "labels": [
+          "Nobara Linux",
+          "nobara"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "bazzite",
+      "title": "Bazzite",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "bazzite",
+        "aliases": [],
+        "preferred_logo": "bazzite",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "fedora"
+      },
+      "match": {
+        "directories": [
+          "bazzite"
+        ],
+        "release_ids": [
+          "bazzite"
+        ],
+        "labels": [
+          "Bazzite"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "bluefin",
+      "title": "Bluefin",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "bluefin",
+        "aliases": [],
+        "preferred_logo": "bluefin",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "fedora"
+      },
+      "match": {
+        "directories": [
+          "bluefin"
+        ],
+        "release_ids": [
+          "bluefin"
+        ],
+        "labels": [
+          "Bluefin"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "aurora",
+        "aliases": [],
+        "preferred_logo": "aurora",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "fedora"
+      },
+      "match": {
+        "directories": [
+          "aurora"
+        ],
+        "release_ids": [
+          "aurora"
+        ],
+        "labels": [
+          "Aurora",
+          "Aurora Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "silverblue",
+      "title": "Fedora Silverblue",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "silverblue",
+        "aliases": [],
+        "preferred_logo": "fedora",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "silverblue"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Fedora Silverblue",
+          "Silverblue"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [
+          "fedora:silverblue"
+        ],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "kinoite",
+      "title": "Fedora Kinoite",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "kinoite",
+        "aliases": [],
+        "preferred_logo": "fedora",
+        "asset": "assets/logos/simpleicons-fedora.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "kinoite"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Fedora Kinoite",
+          "Kinoite"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [
+          "fedora:kinoite"
+        ],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "asahi",
+      "title": "Asahi Linux",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "asahi",
+        "aliases": [],
+        "preferred_logo": "asahilinux",
+        "asset": "assets/logos/simpleicons-asahilinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "asahi"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Asahi Linux",
+          "Fedora Asahi",
+          "asahi"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "kali",
+      "title": "Kali Linux",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "kali",
+        "aliases": [],
+        "preferred_logo": "kalilinux",
+        "asset": "assets/logos/simpleicons-kalilinux.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "kali"
+        ],
+        "release_ids": [
+          "kali"
+        ],
+        "labels": [
+          "Kali Linux",
+          "kali"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "parrot",
+      "title": "Parrot OS",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "parrot",
+        "aliases": [],
+        "preferred_logo": "parrotsecurity",
+        "asset": "assets/logos/simpleicons-parrotsecurity.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "parrot"
+        ],
+        "release_ids": [
+          "parrot"
+        ],
+        "labels": [
+          "Parrot OS",
+          "Parrot Security",
+          "parrot"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "blackarch",
+      "title": "BlackArch",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "blackarch",
+        "aliases": [],
+        "preferred_logo": "blackarch",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "arch"
+      },
+      "match": {
+        "directories": [
+          "blackarch"
+        ],
+        "release_ids": [
+          "blackarch"
+        ],
+        "labels": [
+          "BlackArch",
+          "Black Arch"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "backbox",
+      "title": "BackBox",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "backbox",
+        "aliases": [],
+        "preferred_logo": "@backbox",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "backbox"
+        ],
+        "release_ids": [
+          "backbox"
+        ],
+        "labels": [
+          "BackBox",
+          "BackBox Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "pentoo",
+      "title": "Pentoo",
+      "family": "linux",
+      "parent": "gentoo",
+      "icon": {
+        "key": "pentoo",
+        "aliases": [],
+        "preferred_logo": "gentoo",
+        "asset": "assets/logos/simpleicons-gentoo.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "pentoo"
+        ],
+        "release_ids": [
+          "pentoo"
+        ],
+        "labels": [
+          "Pentoo"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "tails",
+      "title": "Tails",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "tails",
+        "aliases": [],
+        "preferred_logo": "tails",
+        "asset": "assets/logos/simpleicons-tails.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "tails"
+        ],
+        "release_ids": [
+          "tails"
+        ],
+        "labels": [
+          "Tails",
+          "Tails Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "qubes",
+      "title": "Qubes OS",
+      "family": "linux",
+      "parent": "fedora",
+      "icon": {
+        "key": "qubes",
+        "aliases": [],
+        "preferred_logo": "qubesos",
+        "asset": "assets/logos/simpleicons-qubesos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "qubes"
+        ],
+        "release_ids": [
+          "qubes"
+        ],
+        "labels": [
+          "Qubes OS",
+          "qubes"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "whonix",
+      "title": "Whonix",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "whonix",
+        "aliases": [],
+        "preferred_logo": "whonix",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "debian"
+      },
+      "match": {
+        "directories": [
+          "whonix"
+        ],
+        "release_ids": [
+          "whonix"
+        ],
+        "labels": [
+          "Whonix",
+          "Whonix Gateway",
+          "Whonix Workstation"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "steamos",
+      "title": "SteamOS",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "steamos",
+        "aliases": [
+          "steam"
+        ],
+        "preferred_logo": "steam",
+        "asset": "assets/logos/simpleicons-steam.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "steamos"
+        ],
+        "release_ids": [
+          "steamos"
+        ],
+        "labels": [
+          "SteamOS",
+          "Steam OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "holoiso",
+      "title": "HoloISO",
+      "family": "linux",
+      "parent": "steamos",
+      "icon": {
+        "key": "holoiso",
+        "aliases": [],
+        "preferred_logo": "steam",
+        "asset": "assets/logos/simpleicons-steam.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "holoiso"
+        ],
+        "release_ids": [
+          "holoiso"
+        ],
+        "labels": [
+          "HoloISO",
+          "Holo ISO"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "chimeraos",
+      "title": "ChimeraOS",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "chimeraos",
+        "aliases": [],
+        "preferred_logo": "chimeraos",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "arch"
+      },
+      "match": {
+        "directories": [
+          "chimeraos"
+        ],
+        "release_ids": [
+          "chimeraos"
+        ],
+        "labels": [
+          "ChimeraOS",
+          "Chimera OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "batocera",
+      "title": "Batocera",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "batocera",
+        "aliases": [],
+        "preferred_logo": "batocera",
+        "asset": "assets/logos/minimal-batocera.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "batocera"
+        ],
+        "release_ids": [
+          "batocera"
+        ],
+        "labels": [
+          "Batocera"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "lakka",
+      "title": "Lakka",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "lakka",
+        "aliases": [],
+        "preferred_logo": "lakka",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "Lakka"
+      },
+      "match": {
+        "directories": [
+          "lakka"
+        ],
+        "release_ids": [
+          "lakka"
+        ],
+        "labels": [
+          "Lakka"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "recalbox",
+      "title": "Recalbox",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "recalbox",
+        "aliases": [],
+        "preferred_logo": "recalbox",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "Recalbox"
+      },
+      "match": {
+        "directories": [
+          "recalbox"
+        ],
+        "release_ids": [
+          "recalbox"
+        ],
+        "labels": [
+          "Recalbox"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "systemrescue",
+      "title": "SystemRescue",
+      "family": "linux",
+      "parent": "arch",
+      "icon": {
+        "key": "systemrescue",
+        "aliases": [],
+        "preferred_logo": "@systemrescue",
+        "asset": "assets/logos/simpleicons-archlinux.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "arch"
+      },
+      "match": {
+        "directories": [
+          "systemrescue",
+          "sysresccd"
+        ],
+        "release_ids": [
+          "systemrescue",
+          "sysresccd"
+        ],
+        "labels": [
+          "SystemRescue",
+          "System Rescue"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "clonezilla",
+      "title": "Clonezilla",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "clonezilla",
+        "aliases": [],
+        "preferred_logo": "@clonezilla",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "debian"
+      },
+      "match": {
+        "directories": [
+          "clonezilla"
+        ],
+        "release_ids": [
+          "clonezilla"
+        ],
+        "labels": [
+          "Clonezilla",
+          "Clonezilla Live"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "gparted",
+      "title": "GParted Live",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "gparted",
+        "aliases": [],
+        "preferred_logo": "gparted",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "debian"
+      },
+      "match": {
+        "directories": [
+          "gparted"
+        ],
+        "release_ids": [
+          "gparted"
+        ],
+        "labels": [
+          "GParted Live",
+          "gparted"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "rescuezilla",
+      "title": "Rescuezilla",
+      "family": "linux",
+      "parent": "ubuntu",
+      "icon": {
+        "key": "rescuezilla",
+        "aliases": [],
+        "preferred_logo": "@rescuezilla",
+        "asset": "assets/logos/simpleicons-ubuntu.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "ubuntu"
+      },
+      "match": {
+        "directories": [
+          "rescuezilla"
+        ],
+        "release_ids": [
+          "rescuezilla"
+        ],
+        "labels": [
+          "Rescuezilla"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "grml",
+      "title": "Grml",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "grml",
+        "aliases": [],
+        "preferred_logo": "@grml",
+        "asset": "assets/logos/simpleicons-debian.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "debian"
+      },
+      "match": {
+        "directories": [
+          "grml"
+        ],
+        "release_ids": [
+          "grml"
+        ],
+        "labels": [
+          "Grml",
+          "Grml Linux"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "proxmox",
+      "title": "Proxmox VE",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "proxmox",
+        "aliases": [],
+        "preferred_logo": "proxmox",
+        "asset": "assets/logos/simpleicons-proxmox.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "proxmox"
+        ],
+        "release_ids": [
+          "proxmox"
+        ],
+        "labels": [
+          "Proxmox VE",
+          "proxmox"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "proxmoxbackup",
+      "title": "Proxmox Backup",
+      "family": "linux",
+      "parent": "proxmox",
+      "icon": {
+        "key": "proxmoxbackup",
+        "aliases": [],
+        "preferred_logo": "proxmox",
+        "asset": "assets/logos/simpleicons-proxmox.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "proxmoxbackup"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Proxmox Backup",
+          "Proxmox Backup Server",
+          "proxmoxbackup"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "xcpng",
+      "title": "XCP-ng",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "xcpng",
+        "aliases": [],
+        "preferred_logo": "xcpng",
+        "asset": "assets/logos/dashboard-xcp-ng.svg",
+        "source": "dashboard-icons",
+        "license": "Apache-2.0",
+        "source_commit": "d767d7327db7f8ebd3715b552523f61889eea41c"
+      },
+      "match": {
+        "directories": [
+          "xcp-ng",
+          "xcpng"
+        ],
+        "release_ids": [
+          "xcp-ng",
+          "xcpng"
+        ],
+        "labels": [
+          "XCP-ng",
+          "XCP ng",
+          "xcpng"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "xenserver",
+      "title": "XenServer",
+      "family": "linux",
+      "parent": null,
+      "icon": {
+        "key": "xenserver",
+        "aliases": [],
+        "preferred_logo": "xen",
+        "asset": "assets/logos/dashboard-xen.svg",
+        "source": "dashboard-icons",
+        "license": "Apache-2.0",
+        "source_commit": "d767d7327db7f8ebd3715b552523f61889eea41c"
+      },
+      "match": {
+        "directories": [
+          "xenserver"
+        ],
+        "release_ids": [
+          "xenserver"
+        ],
+        "labels": [
+          "XenServer",
+          "Xen Server"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "esxi",
+      "title": "VMware ESXi",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "esxi",
+        "aliases": [],
+        "preferred_logo": "vmware",
+        "asset": "assets/logos/simpleicons-vmware.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "vmware",
+          "esxi"
+        ],
+        "release_ids": [],
+        "labels": [
+          "VMware ESXi",
+          "ESXi"
+        ],
+        "filenames": [
+          "mboot64.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openmediavault",
+      "title": "OpenMediaVault",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "openmediavault",
+        "aliases": [],
+        "preferred_logo": "openmediavault",
+        "asset": "assets/logos/simpleicons-openmediavault.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "openmediavault"
+        ],
+        "release_ids": [
+          "openmediavault"
+        ],
+        "labels": [
+          "OpenMediaVault",
+          "Open Media Vault"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "truenasscale",
+      "title": "TrueNAS SCALE",
+      "family": "linux",
+      "parent": "debian",
+      "icon": {
+        "key": "truenasscale",
+        "aliases": [],
+        "preferred_logo": "truenas",
+        "asset": "assets/logos/simpleicons-truenas.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "truenas-scale"
+        ],
+        "release_ids": [
+          "truenas"
+        ],
+        "labels": [
+          "TrueNAS SCALE",
+          "truenasscale"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "freebsd",
+      "title": "FreeBSD",
+      "family": "bsd",
+      "parent": null,
+      "icon": {
+        "key": "freebsd",
+        "aliases": [],
+        "preferred_logo": "freebsd",
+        "asset": "assets/logos/simpleicons-freebsd.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "freebsd"
+        ],
+        "release_ids": [
+          "freebsd"
+        ],
+        "labels": [
+          "FreeBSD",
+          "Free BSD"
+        ],
+        "filenames": [
+          "loader.efi",
+          "boot1.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openbsd",
+      "title": "OpenBSD",
+      "family": "bsd",
+      "parent": null,
+      "icon": {
+        "key": "openbsd",
+        "aliases": [],
+        "preferred_logo": "openbsd",
+        "asset": "assets/logos/simpleicons-openbsd.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "openbsd"
+        ],
+        "release_ids": [
+          "openbsd"
+        ],
+        "labels": [
+          "OpenBSD",
+          "Open BSD"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "netbsd",
+      "title": "NetBSD",
+      "family": "bsd",
+      "parent": null,
+      "icon": {
+        "key": "netbsd",
+        "aliases": [],
+        "preferred_logo": "netbsd",
+        "asset": "assets/logos/simpleicons-netbsd.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "netbsd"
+        ],
+        "release_ids": [
+          "netbsd"
+        ],
+        "labels": [
+          "NetBSD",
+          "Net BSD"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "dragonfly",
+      "title": "DragonFly BSD",
+      "family": "bsd",
+      "parent": null,
+      "icon": {
+        "key": "dragonfly",
+        "aliases": [],
+        "preferred_logo": "dragonflybsd",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "DragonFly"
+      },
+      "match": {
+        "directories": [
+          "dragonfly"
+        ],
+        "release_ids": [
+          "dragonfly"
+        ],
+        "labels": [
+          "DragonFly BSD",
+          "dragonfly"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ghostbsd",
+      "title": "GhostBSD",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "ghostbsd",
+        "aliases": [],
+        "preferred_logo": "ghostbsd",
+        "asset": "assets/logos/simpleicons-freebsd.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "freebsd"
+      },
+      "match": {
+        "directories": [
+          "ghostbsd"
+        ],
+        "release_ids": [
+          "ghostbsd"
+        ],
+        "labels": [
+          "GhostBSD",
+          "Ghost BSD"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "nomadbsd",
+      "title": "NomadBSD",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "nomadbsd",
+        "aliases": [],
+        "preferred_logo": "freebsd",
+        "asset": "assets/logos/simpleicons-freebsd.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "nomadbsd"
+        ],
+        "release_ids": [
+          "nomadbsd"
+        ],
+        "labels": [
+          "NomadBSD",
+          "Nomad BSD"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "midnightbsd",
+      "title": "MidnightBSD",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "midnightbsd",
+        "aliases": [],
+        "preferred_logo": "@midnightbsd",
+        "asset": "assets/logos/simpleicons-freebsd.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "freebsd"
+      },
+      "match": {
+        "directories": [
+          "midnightbsd"
+        ],
+        "release_ids": [
+          "midnightbsd"
+        ],
+        "labels": [
+          "MidnightBSD",
+          "Midnight BSD"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "truenascore",
+      "title": "TrueNAS CORE",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "truenascore",
+        "aliases": [],
+        "preferred_logo": "truenas",
+        "asset": "assets/logos/simpleicons-truenas.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "truenas-core"
+        ],
+        "release_ids": [],
+        "labels": [
+          "TrueNAS CORE",
+          "FreeNAS",
+          "truenascore"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "opnsense",
+      "title": "OPNsense",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "opnsense",
+        "aliases": [],
+        "preferred_logo": "opnsense",
+        "asset": "assets/logos/simpleicons-opnsense.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "opnsense"
+        ],
+        "release_ids": [
+          "opnsense"
+        ],
+        "labels": [
+          "OPNsense",
+          "OPN sense"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "pfsense",
+      "title": "pfSense",
+      "family": "bsd",
+      "parent": "freebsd",
+      "icon": {
+        "key": "pfsense",
+        "aliases": [],
+        "preferred_logo": "pfsense",
+        "asset": "assets/logos/simpleicons-pfsense.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "pfsense"
+        ],
+        "release_ids": [
+          "pfsense"
+        ],
+        "labels": [
+          "pfSense",
+          "pf Sense"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "android",
+      "title": "Android x86",
+      "family": "android",
+      "parent": null,
+      "icon": {
+        "key": "android",
+        "aliases": [],
+        "preferred_logo": "android",
+        "asset": "assets/logos/simpleicons-android.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "android",
+          "android-x86"
+        ],
+        "release_ids": [
+          "android",
+          "android_x86",
+          "android-x86"
+        ],
+        "labels": [
+          "Android x86",
+          "android"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "blissos",
+      "title": "Bliss OS",
+      "family": "android",
+      "parent": "android",
+      "icon": {
+        "key": "blissos",
+        "aliases": [],
+        "preferred_logo": "blissos",
+        "asset": "assets/logos/simpleicons-android.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "android"
+      },
+      "match": {
+        "directories": [
+          "bliss",
+          "blissos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Bliss OS",
+          "blissos"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "primeos",
+      "title": "PrimeOS",
+      "family": "android",
+      "parent": "android",
+      "icon": {
+        "key": "primeos",
+        "aliases": [],
+        "preferred_logo": "@primeos",
+        "asset": "assets/logos/simpleicons-android.svg",
+        "source": "parent-mark",
+        "license": "CC0-1.0",
+        "shared_with": "android"
+      },
+      "match": {
+        "directories": [
+          "primeos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "PrimeOS",
+          "Prime OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "phoenixos",
+      "title": "Phoenix OS",
+      "family": "android",
+      "parent": "android",
+      "icon": {
+        "key": "phoenixos",
+        "aliases": [],
+        "preferred_logo": "@phoenixos",
+        "asset": "assets/logos/minimal-phoenix.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "phoenixos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Phoenix OS",
+          "phoenixos"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "chromeos",
+      "title": "ChromeOS",
+      "family": "chromeos",
+      "parent": null,
+      "icon": {
+        "key": "chromeos",
+        "aliases": [
+          "chrome"
+        ],
+        "preferred_logo": "googlechrome",
+        "asset": "assets/logos/simpleicons-googlechrome.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "chromeos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "ChromeOS",
+          "Chrome OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "fydeos",
+      "title": "FydeOS",
+      "family": "chromeos",
+      "parent": "chromeos",
+      "icon": {
+        "key": "fydeos",
+        "aliases": [],
+        "preferred_logo": "fydeos",
+        "asset": "assets/logos/minimal-fydeos.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "fydeos"
+        ],
+        "release_ids": [
+          "fydeos"
+        ],
+        "labels": [
+          "FydeOS",
+          "Fyde OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openfyde",
+      "title": "openFyde",
+      "family": "chromeos",
+      "parent": "chromeos",
+      "icon": {
+        "key": "openfyde",
+        "aliases": [],
+        "preferred_logo": "fydeos",
+        "asset": "assets/logos/minimal-openfyde.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "openfyde"
+        ],
+        "release_ids": [
+          "openfyde"
+        ],
+        "labels": [
+          "openFyde",
+          "open Fyde"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "brunch",
+      "title": "Brunch",
+      "family": "chromeos",
+      "parent": "chromeos",
+      "icon": {
+        "key": "brunch",
+        "aliases": [],
+        "preferred_logo": "googlechrome",
+        "asset": "assets/logos/simpleicons-googlechrome.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "brunch"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Brunch",
+          "Brunch ChromeOS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "haiku",
+      "title": "Haiku",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "haiku",
+        "aliases": [],
+        "preferred_logo": "haiku",
+        "asset": "assets/logos/dashboard-haiku.svg",
+        "source": "dashboard-icons",
+        "license": "Apache-2.0",
+        "source_commit": "d767d7327db7f8ebd3715b552523f61889eea41c"
+      },
+      "match": {
+        "directories": [
+          "haiku"
+        ],
+        "release_ids": [
+          "haiku"
+        ],
+        "labels": [
+          "Haiku",
+          "Haiku OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "reactos",
+      "title": "ReactOS",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "reactos",
+        "aliases": [],
+        "preferred_logo": "reactos",
+        "asset": "assets/logos/simpleicons-reactos.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "reactos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "ReactOS",
+          "React OS"
+        ],
+        "filenames": [
+          "freeldr.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "freedos",
+      "title": "FreeDOS",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "freedos",
+        "aliases": [],
+        "preferred_logo": "freedos",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "FreeDOS"
+      },
+      "match": {
+        "directories": [
+          "freedos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "FreeDOS",
+          "Free DOS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "kolibrios",
+      "title": "KolibriOS",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "kolibrios",
+        "aliases": [],
+        "preferred_logo": "@kolibrios",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "KolibriOS"
+      },
+      "match": {
+        "directories": [
+          "kolibri",
+          "kolibrios"
+        ],
+        "release_ids": [],
+        "labels": [
+          "KolibriOS",
+          "Kolibri OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "illumos",
+      "title": "illumos",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "illumos",
+        "aliases": [],
+        "preferred_logo": "illumos",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "illumos"
+      },
+      "match": {
+        "directories": [
+          "illumos"
+        ],
+        "release_ids": [],
+        "labels": [
+          "illumos"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "openindiana",
+      "title": "OpenIndiana",
+      "family": "other",
+      "parent": "illumos",
+      "icon": {
+        "key": "openindiana",
+        "aliases": [],
+        "preferred_logo": "openindiana",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "OpenIndiana"
+      },
+      "match": {
+        "directories": [
+          "openindiana"
+        ],
+        "release_ids": [
+          "openindiana"
+        ],
+        "labels": [
+          "OpenIndiana",
+          "Open Indiana"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "omnios",
+      "title": "OmniOS",
+      "family": "other",
+      "parent": "illumos",
+      "icon": {
+        "key": "omnios",
+        "aliases": [],
+        "preferred_logo": "@omnios",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "OmniOS"
+      },
+      "match": {
+        "directories": [
+          "omnios"
+        ],
+        "release_ids": [
+          "omnios"
+        ],
+        "labels": [
+          "OmniOS",
+          "Omni OS"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "solaris",
+      "title": "Oracle Solaris",
+      "family": "other",
+      "parent": null,
+      "icon": {
+        "key": "solaris",
+        "aliases": [],
+        "preferred_logo": "oracle",
+        "asset": "assets/logos/dashboard-oracle.svg",
+        "source": "dashboard-icons",
+        "license": "Apache-2.0",
+        "source_commit": "d767d7327db7f8ebd3715b552523f61889eea41c"
+      },
+      "match": {
+        "directories": [
+          "solaris"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Oracle Solaris",
+          "solaris"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "ventoy",
+      "title": "Ventoy",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "ventoy",
+        "aliases": [],
+        "preferred_logo": "ventoy",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "Ventoy"
+      },
+      "match": {
+        "directories": [
+          "ventoy"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Ventoy",
+          "VTOYEFI"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "refind",
+      "title": "rEFInd",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "refind",
+        "aliases": [],
+        "preferred_logo": "@refind",
+        "asset": "assets/logos/minimal-refind.png",
+        "source": "minimal",
+        "license": "MIT",
+        "source_commit": "56a06a4bd9ed76c05523a22017056dbecca4145d"
+      },
+      "match": {
+        "directories": [
+          "refind"
+        ],
+        "release_ids": [],
+        "labels": [
+          "rEFInd"
+        ],
+        "filenames": [
+          "refind_x64.efi",
+          "refind_aa64.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "clover",
+      "title": "Clover",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "clover",
+        "aliases": [],
+        "preferred_logo": "clover",
+        "asset": "assets/logos/refind-clover.png",
+        "source": "refind",
+        "license": "GPL-3.0-or-later",
+        "source_commit": "cf542da"
+      },
+      "match": {
+        "directories": [
+          "clover"
+        ],
+        "release_ids": [],
+        "labels": [
+          "Clover",
+          "Clover EFI"
+        ],
+        "filenames": [
+          "CLOVERX64.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "systemd",
+      "title": "systemd boot",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "systemd",
+        "aliases": [
+          "gummiboot"
+        ],
+        "preferred_logo": "systemd",
+        "asset": "assets/logos/refind-systemd.png",
+        "source": "refind",
+        "license": "GPL-3.0-or-later",
+        "source_commit": "cf542da"
+      },
+      "match": {
+        "directories": [
+          "systemd"
+        ],
+        "release_ids": [],
+        "labels": [
+          "systemd boot",
+          "systemd"
+        ],
+        "filenames": [
+          "systemd-bootx64.efi",
+          "systemd-bootaa64.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "grub",
+      "title": "GRUB",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "grub",
+        "aliases": [],
+        "preferred_logo": "gnu",
+        "asset": "assets/logos/simpleicons-gnu.svg",
+        "source": "simple-icons",
+        "license": "CC0-1.0",
+        "source_commit": "cd796c98565fc466923fc1128b962e133fa3c612"
+      },
+      "match": {
+        "directories": [
+          "grub"
+        ],
+        "release_ids": [],
+        "labels": [
+          "GRUB",
+          "GNU GRUB"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": true
+      }
+    },
+    {
+      "id": "ipxe",
+      "title": "iPXE",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "ipxe",
+        "aliases": [
+          "network",
+          "netbootxyz"
+        ],
+        "preferred_logo": "@ipxe",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "iPXE"
+      },
+      "match": {
+        "directories": [
+          "ipxe"
+        ],
+        "release_ids": [],
+        "labels": [
+          "iPXE"
+        ],
+        "filenames": [
+          "ipxe.efi",
+          "ipxe_x64.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "uefishell",
+      "title": "UEFI Shell",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "uefishell",
+        "aliases": [],
+        "preferred_logo": "@shell",
+        "asset": null,
+        "source": "local-wordmark",
+        "license": "GPL-3.0-or-later",
+        "wordmark": "UEFI Shell"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "UEFI Shell",
+          "uefishell"
+        ],
+        "filenames": [
+          "shellx64.efi",
+          "shell.efi",
+          "openshell.efi"
+        ],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    },
+    {
+      "id": "uefi",
+      "title": "UEFI",
+      "family": "boot",
+      "parent": null,
+      "icon": {
+        "key": "uefi",
+        "aliases": [
+          "unknown"
+        ],
+        "preferred_logo": "@uefi",
+        "asset": "assets/logos/local-chip.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
+      },
+      "match": {
+        "directories": [],
+        "release_ids": [],
+        "labels": [
+          "UEFI"
+        ],
+        "filenames": [],
+        "path_suffixes": [],
+        "release_variants": [],
+        "file_prefixes": [],
+        "generic_loader": false
+      }
+    }
+  ]
+}

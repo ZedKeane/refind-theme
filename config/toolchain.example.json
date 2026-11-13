@@ -1,0 +1,7 @@
+{
+  "zig": "/path/to/zig-0.13.0/zig",
+  "objcopy": "/path/to/GNU/binutils/objcopy",
+  "font": "/path/to/SF-Pro-Text-Regular.otf",
+  "cjk_font": "/path/to/PingFangSC-Regular.otf",
+  "runtime_font": "/path/to/build/apple-chinese-16.png"
+}

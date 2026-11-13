@@ -1,0 +1,639 @@
+{
+  "strings": [
+    {
+      "id": "efi_revision_d_02d",
+      "en": " EFI Revision %d.%02d",
+      "zh": " EFI 版本：%d.%02d"
+    },
+    {
+      "id": "error_setting_system_integrity_protection_code",
+      "en": " Error setting System Integrity Protection code.",
+      "zh": " 设置系统完整性保护状态失败。"
+    },
+    {
+      "id": "firmware_s_d_02d",
+      "en": " Firmware: %s %d.%02d",
+      "zh": " 固件：%s %d.%02d"
+    },
+    {
+      "id": "platform_arm_64_bit_secure_boot_s_s",
+      "en": " Platform: ARM (64 bit); Secure Boot %s %s",
+      "zh": " 平台：ARM（64 位）；安全启动%s %s"
+    },
+    {
+      "id": "platform_unknown",
+      "en": " Platform: unknown",
+      "zh": " 平台：未知"
+    },
+    {
+      "id": "platform_x86_32_bit_secure_boot_s_s",
+      "en": " Platform: x86 (32 bit); Secure Boot %s %s",
+      "zh": " 平台：x86（32 位）；安全启动%s %s"
+    },
+    {
+      "id": "platform_x86_64_64_bit_secure_boot_s_s",
+      "en": " Platform: x86_64 (64 bit); Secure Boot %s %s",
+      "zh": " 平台：x86_64（64 位）；安全启动%s %s"
+    },
+    {
+      "id": "screen_output_s",
+      "en": " Screen Output: %s",
+      "zh": " 显示输出：%s"
+    },
+    {
+      "id": "system_integrity_protection_is_disabled_0x_02x",
+      "en": " System Integrity Protection is disabled (0x%02x)",
+      "zh": " 系统完整性保护已停用（0x%02x）"
+    },
+    {
+      "id": "system_integrity_protection_is_disabled_for_os_x_10_x_0x_02x",
+      "en": " System Integrity Protection is disabled for OS X 10.x (0x%02x)",
+      "zh": " OS X 10.x 系统完整性保护已停用（0x%02x）"
+    },
+    {
+      "id": "system_integrity_protection_is_enabled_0x_02x",
+      "en": " System Integrity Protection is enabled (0x%02x)",
+      "zh": " 系统完整性保护已启用（0x%02x）"
+    },
+    {
+      "id": "system_integrity_protection_status_0x_02x",
+      "en": " System Integrity Protection status: 0x%02x",
+      "zh": " 系统完整性保护状态：0x%02x"
+    },
+    {
+      "id": "unknown_system_integrity_protection_version",
+      "en": " Unknown System Integrity Protection version",
+      "zh": " 未知的系统完整性保护版本"
+    },
+    {
+      "id": "s_disk_d",
+      "en": "%s disk %d",
+      "zh": "%s磁盘 %d"
+    },
+    {
+      "id": "s_in_d_seconds",
+      "en": "%s in %d seconds",
+      "zh": "%s倒计时：%d 秒"
+    },
+    {
+      "id": "direct",
+      "en": "(direct)",
+      "zh": "（直接启动）"
+    },
+    {
+      "id": "in_dx_d_text_mode",
+      "en": "(in %dx%d text mode)",
+      "zh": "（%dx%d 文本模式）"
+    },
+    {
+      "id": "via_shim",
+      "en": "(via Shim)",
+      "zh": "（通过 Shim）"
+    },
+    {
+      "id": "hit_any_key_to_continue",
+      "en": "* Hit any key to continue *",
+      "zh": "* 按任意键继续 *"
+    },
+    {
+      "id": "about",
+      "en": "About",
+      "zh": "关于"
+    },
+    {
+      "id": "about_refind",
+      "en": "About rEFInd",
+      "zh": "关于 rEFInd"
+    },
+    {
+      "id": "apple_recovery_on_s",
+      "en": "Apple Recovery on %s",
+      "zh": "Apple 恢复（%s）"
+    },
+    {
+      "id": "automatic_boot",
+      "en": "Automatic boot",
+      "zh": "自动启动"
+    },
+    {
+      "id": "boot_s_from_s",
+      "en": "Boot %s from %s",
+      "zh": "启动 %s（%s）"
+    },
+    {
+      "id": "boot_linux",
+      "en": "Boot Linux",
+      "zh": "启动 Linux"
+    },
+    {
+      "id": "boot_linux_for_a_17_imac_or_a_15_macbook_pro",
+      "en": "Boot Linux for a 17\" iMac or a 15\" MacBook Pro (*)",
+      "zh": "启动 Linux（17 英寸 iMac 或 15 英寸 MacBook Pro）(*)"
+    },
+    {
+      "id": "boot_linux_for_a_20_imac",
+      "en": "Boot Linux for a 20\" iMac (*)",
+      "zh": "启动 Linux（20 英寸 iMac）(*)"
+    },
+    {
+      "id": "boot_linux_for_a_mac_mini",
+      "en": "Boot Linux for a Mac Mini (*)",
+      "zh": "启动 Linux（Mac Mini）(*)"
+    },
+    {
+      "id": "boot_windows_from_cd_rom",
+      "en": "Boot Windows from CD-ROM",
+      "zh": "从光盘启动 Windows"
+    },
+    {
+      "id": "boot_windows_from_hard_disk",
+      "en": "Boot Windows from Hard Disk",
+      "zh": "从硬盘启动 Windows"
+    },
+    {
+      "id": "boot_macos_in_safe_mode",
+      "en": "Boot macOS in safe mode",
+      "zh": "以安全模式启动 macOS"
+    },
+    {
+      "id": "boot_macos_in_single_user_mode",
+      "en": "Boot macOS in single user mode",
+      "zh": "以单用户模式启动 macOS"
+    },
+    {
+      "id": "boot_macos_in_verbose_mode",
+      "en": "Boot macOS in verbose mode",
+      "zh": "以详细模式启动 macOS"
+    },
+    {
+      "id": "boot_macos_in_verbose_mode_32_bit",
+      "en": "Boot macOS in verbose mode (32-bit)",
+      "zh": "以详细模式启动 macOS（32 位）"
+    },
+    {
+      "id": "boot_macos_in_verbose_mode_64_bit",
+      "en": "Boot macOS in verbose mode (64-bit)",
+      "zh": "以详细模式启动 macOS（64 位）"
+    },
+    {
+      "id": "boot_macos_with_a_32_bit_kernel",
+      "en": "Boot macOS with a 32-bit kernel",
+      "zh": "使用 32 位内核启动 macOS"
+    },
+    {
+      "id": "boot_macos_with_a_64_bit_kernel",
+      "en": "Boot macOS with a 64-bit kernel",
+      "zh": "使用 64 位内核启动 macOS"
+    },
+    {
+      "id": "boot_options_for_s",
+      "en": "Boot options for %s",
+      "zh": "%s 的启动选项"
+    },
+    {
+      "id": "boot_using_default_options",
+      "en": "Boot using default options",
+      "zh": "使用默认选项启动"
+    },
+    {
+      "id": "boot_04x_has_been_deleted",
+      "en": "Boot%04x has been deleted.",
+      "zh": "已删除 Boot%04x。"
+    },
+    {
+      "id": "boot_04x_is_now_the_default_efi_boot_option",
+      "en": "Boot%04x is now the default EFI boot option.",
+      "zh": "Boot%04x 已设为默认 EFI 启动选项。"
+    },
+    {
+      "id": "booting_os",
+      "en": "Booting OS",
+      "zh": "正在启动系统"
+    },
+    {
+      "id": "built_with_gnu_efi",
+      "en": "Built with GNU-EFI",
+      "zh": "使用 GNU-EFI 构建"
+    },
+    {
+      "id": "built_with_tianocore_edk2",
+      "en": "Built with TianoCore EDK2",
+      "zh": "使用 TianoCore EDK2 构建"
+    },
+    {
+      "id": "cannot_hide_entry_for_manual_boot_stanza",
+      "en": "Cannot Hide Entry for Manual Boot Stanza",
+      "zh": "无法隐藏手动配置的启动入口"
+    },
+    {
+      "id": "change_sip_policy",
+      "en": "Change SIP Policy",
+      "zh": "更改 SIP 策略"
+    },
+    {
+      "id": "copyright_c_2006_2010_christoph_pfisterer",
+      "en": "Copyright (c) 2006-2010 Christoph Pfisterer",
+      "zh": "版权所有 (c) 2006–2010 Christoph Pfisterer"
+    },
+    {
+      "id": "copyright_c_2012_2024_roderick_w_smith",
+      "en": "Copyright (c) 2012-2024 Roderick W. Smith",
+      "zh": "版权所有 (c) 2012–2024 Roderick W. Smith"
+    },
+    {
+      "id": "delete_to_delete_it_or_esc_to_return_to_main_menu_without_changes",
+      "en": "Delete to delete it, or Esc to return to main menu without changes",
+      "zh": "Delete 删除，或按 Esc 返回并取消更改"
+    },
+    {
+      "id": "disk_partitioning_tool",
+      "en": "Disk partitioning tool",
+      "zh": "磁盘分区工具"
+    },
+    {
+      "id": "distributed_under_the_terms_of_the_gnu_gplv3_license",
+      "en": "Distributed under the terms of the GNU GPLv3 license",
+      "zh": "按 GNU GPLv3 许可证分发"
+    },
+    {
+      "id": "efi_boot_order_list_is_unavailable",
+      "en": "EFI boot order list is unavailable",
+      "zh": "无法获取 EFI 启动顺序"
+    },
+    {
+      "id": "efi_shell",
+      "en": "EFI shell",
+      "zh": "EFI 终端"
+    },
+    {
+      "id": "error_copying_some_files",
+      "en": "Error copying some files",
+      "zh": "部分文件复制失败"
+    },
+    {
+      "id": "exit_refind",
+      "en": "Exit rEFInd",
+      "zh": "退出 rEFInd"
+    },
+    {
+      "id": "external",
+      "en": "External",
+      "zh": "外接"
+    },
+    {
+      "id": "fallback_boot_loader",
+      "en": "Fallback boot loader",
+      "zh": "备用启动程序"
+    },
+    {
+      "id": "for_more_information_see_the_refind_web_site",
+      "en": "For more information, see the rEFInd Web site:",
+      "zh": "更多信息请访问 rEFInd 网站："
+    },
+    {
+      "id": "from_s_partition_d",
+      "en": "From \"%s\", partition %d",
+      "zh": "来自“%s”的第%d分区"
+    },
+    {
+      "id": "from_s_system_partition_is_ambiguous",
+      "en": "From \"%s\"; system partition is ambiguous",
+      "zh": "来自“%s”，无法唯一确定系统分区"
+    },
+    {
+      "id": "graphics_output_uefi_dx_d",
+      "en": "Graphics Output (UEFI), %dx%d",
+      "zh": "图形输出（UEFI），%dx%d"
+    },
+    {
+      "id": "hide_efi_os_tag",
+      "en": "Hide EFI OS Tag",
+      "zh": "隐藏 EFI 系统入口"
+    },
+    {
+      "id": "hide_firmware_boot_option_tag",
+      "en": "Hide Firmware Boot Option Tag",
+      "zh": "隐藏固件启动入口"
+    },
+    {
+      "id": "hide_legacy_os_tag",
+      "en": "Hide Legacy OS Tag",
+      "zh": "隐藏传统系统入口"
+    },
+    {
+      "id": "hide_tool_tag",
+      "en": "Hide Tool Tag",
+      "zh": "隐藏工具入口"
+    },
+    {
+      "id": "hybrid_mbr_tool",
+      "en": "Hybrid MBR tool",
+      "zh": "混合 MBR 工具"
+    },
+    {
+      "id": "information",
+      "en": "Information",
+      "zh": "提示"
+    },
+    {
+      "id": "initializing",
+      "en": "Initializing...",
+      "zh": "正在初始化……"
+    },
+    {
+      "id": "insert_tab_or_f2_for_more_options_esc_or_backspace_to_refresh",
+      "en": "Insert, Tab, or F2 for more options; Esc or Backspace to refresh",
+      "zh": "Insert、Tab 或 F2 查看选项；Esc 或退格键刷新"
+    },
+    {
+      "id": "install_refind",
+      "en": "Install rEFInd",
+      "zh": "安装 rEFInd"
+    },
+    {
+      "id": "install_refind_to_disk",
+      "en": "Install rEFInd to Disk",
+      "zh": "安装 rEFInd 到磁盘"
+    },
+    {
+      "id": "internal",
+      "en": "Internal",
+      "zh": "内置"
+    },
+    {
+      "id": "internal_error",
+      "en": "Internal Error",
+      "zh": "内部错误"
+    },
+    {
+      "id": "legacy_os",
+      "en": "Legacy OS",
+      "zh": "传统系统"
+    },
+    {
+      "id": "line_editor",
+      "en": "Line Editor",
+      "zh": "编辑启动参数"
+    },
+    {
+      "id": "mok_utility",
+      "en": "MOK utility",
+      "zh": "MOK 密钥管理"
+    },
+    {
+      "id": "main_menu",
+      "en": "Main Menu",
+      "zh": "主菜单"
+    },
+    {
+      "id": "manage_efi_boot_order",
+      "en": "Manage EFI Boot Order",
+      "zh": "管理 EFI 启动顺序"
+    },
+    {
+      "id": "manage_hidden_tags_menu",
+      "en": "Manage Hidden Tags Menu",
+      "zh": "管理隐藏项目"
+    },
+    {
+      "id": "memory_test_utility",
+      "en": "Memory test utility",
+      "zh": "内存检测工具"
+    },
+    {
+      "id": "microsoft_efi_boot_boot_repair_backup",
+      "en": "Microsoft EFI boot (Boot Repair backup)",
+      "zh": "Microsoft EFI 启动（修复备份）"
+    },
+    {
+      "id": "microsoft_recovery_on_s",
+      "en": "Microsoft Recovery on %s",
+      "zh": "Windows 恢复（%s）"
+    },
+    {
+      "id": "note_this_is_an_example_entries",
+      "en": "NOTE: This is an example. Entries",
+      "zh": "提示：这些是示例选项。"
+    },
+    {
+      "id": "netboot",
+      "en": "Netboot",
+      "zh": "网络启动"
+    },
+    {
+      "id": "no",
+      "en": "No",
+      "zh": "否"
+    },
+    {
+      "id": "no_eligible_esps_found",
+      "en": "No eligible ESPs found",
+      "zh": "没有找到符合条件的 EFI 分区"
+    },
+    {
+      "id": "no_hidden_tags_found",
+      "en": "No hidden tags found",
+      "zh": "没有隐藏项目"
+    },
+    {
+      "id": "portions_copyright_c_intel_corporation_and_others",
+      "en": "Portions Copyright (c) Intel Corporation and others",
+      "zh": "部分代码版权归 Intel 等作者所有"
+    },
+    {
+      "id": "press_enter_to_return_to_main_menu",
+      "en": "Press Enter to return to main menu",
+      "zh": "按回车键返回主菜单"
+    },
+    {
+      "id": "problems_encountered_during_installation",
+      "en": "Problems encountered during installation",
+      "zh": "安装过程中出现问题"
+    },
+    {
+      "id": "really_hide_s",
+      "en": "Really hide %s?",
+      "zh": "确定隐藏 %s？"
+    },
+    {
+      "id": "really_hide_s_91",
+      "en": "Really hide '%s'?",
+      "zh": "确定隐藏“%s”？"
+    },
+    {
+      "id": "reboot_computer",
+      "en": "Reboot Computer",
+      "zh": "重新启动"
+    },
+    {
+      "id": "reboot_to_s",
+      "en": "Reboot to %s",
+      "zh": "重启到 %s"
+    },
+    {
+      "id": "reboot_to_computer_setup_utility",
+      "en": "Reboot to Computer Setup Utility",
+      "zh": "进入固件设置"
+    },
+    {
+      "id": "return_to_main_menu",
+      "en": "Return to Main Menu",
+      "zh": "返回主菜单"
+    },
+    {
+      "id": "run_apple_hardware_test",
+      "en": "Run Apple Hardware Test",
+      "zh": "运行 Apple 硬件检测"
+    },
+    {
+      "id": "run_elilo_in_interactive_mode",
+      "en": "Run ELILO in interactive mode",
+      "zh": "以交互模式运行 ELILO"
+    },
+    {
+      "id": "run_xom_in_text_mode",
+      "en": "Run XOM in text mode",
+      "zh": "以文本模式运行 XOM"
+    },
+    {
+      "id": "running_on",
+      "en": "Running on:",
+      "zh": "运行环境："
+    },
+    {
+      "id": "scanning_for_boot_loaders_please_wait",
+      "en": "Scanning for boot loaders; please wait....",
+      "zh": "正在扫描启动程序，请稍候……"
+    },
+    {
+      "id": "select_a_destination_and_press_enter_or",
+      "en": "Select a destination and press Enter or",
+      "zh": "选择目标后按回车键确认，或"
+    },
+    {
+      "id": "select_a_partition_and_press_enter_to_install_refind",
+      "en": "Select a partition and press Enter to install rEFInd",
+      "zh": "选择分区后按回车键安装 rEFInd"
+    },
+    {
+      "id": "select_a_tag_and_press_enter_to_restore_it",
+      "en": "Select a tag and press Enter to restore it",
+      "zh": "选择隐藏项目，按回车键恢复显示"
+    },
+    {
+      "id": "select_an_option_and_press_enter_or",
+      "en": "Select an option and press Enter or",
+      "zh": "选择项目后按回车键确认，或"
+    },
+    {
+      "id": "select_an_option_and_press_enter_to_make_it_the_default_or_to_delete_i",
+      "en": "Select an option and press Enter to make it the default or '-' to delete it",
+      "zh": "回车设为默认，减号删除所选项目"
+    },
+    {
+      "id": "select_an_option_and_press_enter_to_make_it_the_default_press_or",
+      "en": "Select an option and press Enter to make it the default, press '-' or",
+      "zh": "选择项目后按回车设为默认，按减号或"
+    },
+    {
+      "id": "shut_down_computer",
+      "en": "Shut Down Computer",
+      "zh": "关闭电脑"
+    },
+    {
+      "id": "shutdown",
+      "en": "Shutdown",
+      "zh": "自动关机"
+    },
+    {
+      "id": "start_s",
+      "en": "Start %s",
+      "zh": "启动 %s"
+    },
+    {
+      "id": "supposed_microsoft_efi_boot_probably_grub",
+      "en": "Supposed Microsoft EFI boot (probably GRUB)",
+      "zh": "Microsoft EFI 启动入口（可能是 GRUB）"
+    },
+    {
+      "id": "text_only_console_dx_d",
+      "en": "Text-only console, %dx%d",
+      "zh": "文本控制台，%dx%d"
+    },
+    {
+      "id": "to_hide_an_internal_tool_edit_the_showtools_line_in_refind_conf",
+      "en": "To hide an internal tool, edit the 'showtools' line in refind.conf",
+      "zh": "如需隐藏内置工具，请编辑 refind.conf 的 showtools 设置"
+    },
+    {
+      "id": "uga_draw_efi_1_10_dx_d",
+      "en": "UGA Draw (EFI 1.10), %dx%d",
+      "zh": "UGA 绘图（EFI 1.10），%dx%d"
+    },
+    {
+      "id": "unable_to_comply",
+      "en": "Unable to Comply",
+      "zh": "无法执行"
+    },
+    {
+      "id": "unknown",
+      "en": "Unknown",
+      "zh": "未知"
+    },
+    {
+      "id": "use_arrow_keys_to_move_cursor_enter_to_boot",
+      "en": "Use arrow keys to move cursor; Enter to boot;",
+      "zh": "方向键选择，回车启动；"
+    },
+    {
+      "id": "use_cursor_keys_to_edit_esc_to_exit_enter_to_boot_with_edited_options",
+      "en": "Use cursor keys to edit, Esc to exit, Enter to boot with edited options",
+      "zh": "方向键编辑，Esc 退出，回车按修改后的参数启动"
+    },
+    {
+      "id": "warning",
+      "en": "Warning",
+      "zh": "警告"
+    },
+    {
+      "id": "yes",
+      "en": "Yes",
+      "zh": "是"
+    },
+    {
+      "id": "you_must_edit_refind_conf_to_remove_this_entry",
+      "en": "You must edit refind.conf to remove this entry.",
+      "zh": "请编辑 refind.conf 删除此入口。"
+    },
+    {
+      "id": "active",
+      "en": "active",
+      "zh": "已启用"
+    },
+    {
+      "id": "inactive",
+      "en": "inactive",
+      "zh": "未启用"
+    },
+    {
+      "id": "marked_with_may_not_work",
+      "en": "marked with (*) may not work.",
+      "zh": "标有 (*) 的选项可能无法使用。"
+    },
+    {
+      "id": "press_esc_to_return_to_main_menu_without_changes",
+      "en": "press Esc to return to main menu without changes",
+      "zh": "按 Esc 返回主菜单并取消更改"
+    },
+    {
+      "id": "refind_version_s",
+      "en": "rEFInd Version %s",
+      "zh": "rEFInd 版本 %s"
+    },
+    {
+      "id": "refind_successfully_installed",
+      "en": "rEFInd successfully installed",
+      "zh": "rEFInd 安装成功"
+    }
+  ]
+}

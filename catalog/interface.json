@@ -1,0 +1,23 @@
+{
+  "tool_captions": {
+    "func_about": "About",
+    "func_hidden": "Hidden Items",
+    "func_shutdown": "Shut Down",
+    "func_reset": "Restart",
+    "func_firmware": "Firmware",
+    "func_exit": "Exit",
+    "func_install": "Install",
+    "func_bootorder": "Boot Order",
+    "func_csr_rotate": "SIP Policy",
+    "tool_shell": "EFI Shell",
+    "tool_part": "Partitions",
+    "tool_memtest": "Memory Test",
+    "tool_mok_tool": "MOK Keys",
+    "tool_netboot": "Network Boot",
+    "tool_fwupdate": "Firmware Update",
+    "tool_rescue": "Recovery",
+    "tool_apple_rescue": "Apple Recovery",
+    "tool_windows_rescue": "Windows Recovery"
+  },
+  "footer": "Arrow keys: select    Enter: boot    Tab / F2: options    Esc: refresh"
+}
