@@ -2,7 +2,7 @@
 
 | 内容 | 固定版本/提交 | 来源与许可 |
 |---|---|---|
-| rEFInd 源码与既有图标 | 0.14.2 / cf542da；中英文修改版 minimal0.2.1 | [rEFInd](https://github.com/rodsmith/refind)，GPL-3.0-or-later，见 LICENSE 和 licenses/source-notices.txt |
+| rEFInd 源码与既有图标 | 0.14.2 / cf542da；中英文修改版 minimal0.2.2 | [rEFInd](https://github.com/rodsmith/refind)，GPL-3.0-or-later，见 LICENSE 和 licenses/source-notices.txt |
 | GNU-EFI | 3.0.18 | [GNU-EFI](https://sourceforge.net/projects/gnu-efi/)，原始声明见 licenses/source-notices.txt，各文件 BSD/LGPL 条款 |
 | Minimal 原主题及部分图标 | 56a06a4bd9ed76c05523a22017056dbecca4145d | [rEFInd-minimal](https://github.com/EvanPurkhiser/rEFInd-minimal)，MIT，见 assets/theme-base/LICENSE |
 | Simple Icons SVG | cd796c98565fc466923fc1128b962e133fa3c612 | [Simple Icons](https://github.com/simple-icons/simple-icons)，CC0，见 licenses/Simple-Icons-CC0.txt |

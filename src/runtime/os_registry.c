@@ -9,7 +9,11 @@ static int equal(const osr_char *a,const osr_char *b) {
  return !*a&&!*b;
 }
 static int ascii_equal(const char *a,const char *b) {
- if(!a||!b)return 0;while(*a&&*b)if(*a++!=*b++)return 0;return !*a&&!*b;
+ if (!a || !b) { return 0; }
+ while (*a && *b) {
+  if (*a++ != *b++) { return 0; }
+ }
+ return !*a && !*b;
 }
 static int separator(unsigned c) { return c=='/'||c=='\\'; }
 static int component(const osr_char *path,const osr_char *alias) {
@@ -108,7 +112,8 @@ static int key_is(const unsigned char *p,unsigned n,const char *key) {
 }
 void osr_parse_release(const unsigned char *data,unsigned size,osr_char *id,unsigned id_cap,osr_char *variant,unsigned variant_cap) {
  unsigned at=0,start,end,p,k,n,cap,quote;osr_char *out;
- if(id_cap)id[0]=0;if(variant_cap)variant[0]=0;
+ if (id_cap) { id[0] = 0; }
+ if (variant_cap) { variant[0] = 0; }
  while(at<size) {
   start=at;while(at<size&&data[at]!='\n'&&data[at]!='\r')at++;end=at;while(at<size&&(data[at]=='\n'||data[at]=='\r'))at++;
   p=start;while(p<end&&(data[p]==' '||data[p]=='\t'))p++;
@@ -126,6 +131,7 @@ void osr_parse_release(const unsigned char *data,unsigned size,osr_char *id,unsi
   if(quote&&(p==end||data[p++]!=quote))continue;
   while(p<end&&(data[p]==' '||data[p]=='\t'))p++;
   if(p<end&&data[p]!='#')continue;
-  for(p=0;p<n;p++)out[p]=data[k+p];out[n]=0;
+  for (p = 0; p < n; p++) { out[p] = data[k + p]; }
+  out[n] = 0;
  }
 }

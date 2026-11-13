@@ -1,8 +1,8 @@
 # 验证记录 / Validation
 
-项目版本：0.2.1；配套程序：rEFInd 0.14.2-minimal0.2.1；系统目录：130 条、154 个系统图标文件名；界面目录：127 组中英文文字。
+项目版本：0.2.2；配套程序：rEFInd 0.14.2-minimal0.2.2；系统目录：130 条、154 个系统图标文件名；界面目录：127 组中英文文字。
 
-Project version: 0.2.1. Application: rEFInd 0.14.2-minimal0.2.1. The catalog contains 130 entries and 154 system icon filenames; the interface catalog contains 127 translation pairs.
+Project version: 0.2.2. Application: rEFInd 0.14.2-minimal0.2.2. The catalog contains 130 entries and 154 system icon filenames; the interface catalog contains 127 translation pairs.
 
 ## 构建与检查 / Build and checks
 
