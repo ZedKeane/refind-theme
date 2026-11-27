@@ -3942,12 +3942,14 @@
       "parent": null,
       "icon": {
         "key": "ventoy",
-        "aliases": [],
+        "aliases": [
+          "vtoyefi",
+          "vtoy"
+        ],
         "preferred_logo": "ventoy",
-        "asset": null,
-        "source": "local-wordmark",
-        "license": "GPL-3.0-or-later",
-        "wordmark": "Ventoy"
+        "asset": "assets/logos/local-ventoy.svg",
+        "source": "local-geometric",
+        "license": "GPL-3.0-or-later"
       },
       "match": {
         "directories": [
@@ -3958,7 +3960,12 @@
           "Ventoy",
           "VTOYEFI"
         ],
-        "filenames": [],
+        "filenames": [
+          "ventoy_x64.efi",
+          "ventoy_ia32.efi",
+          "ventoy_aa64.efi",
+          "ventoy_mips64.efi"
+        ],
         "path_suffixes": [],
         "release_variants": [],
         "file_prefixes": [],

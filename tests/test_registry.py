@@ -49,6 +49,17 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(self.match(path='/EFI/Microsoft/Boot/bootmgfw.efi', title='Windows 11', id='ubuntu'), 'windows11')
         self.assertEqual(self.match(path='/EFI/ubuntu/grubx64.efi', title='Windows 11'), 'ubuntu')
 
+    def test_ventoy_boot_media(self):
+        for path in ('/EFI/BOOT/BOOTX64.EFI', '/EFI/BOOT/grubx64_real.efi'):
+            with self.subTest(path=path):
+                self.assertEqual(self.match(path=path, fs='VTOYEFI'), 'ventoy')
+                self.assertEqual(self.match(path=path, part='VTOYEFI'), 'ventoy')
+        for name in ('ventoy_x64.efi', 'ventoy_ia32.efi', 'ventoy_aa64.efi', 'ventoy_mips64.efi'):
+            self.assertEqual(self.match(path='/EFI/BOOT/' + name), 'ventoy')
+        self.assertEqual(self.match(path='/EFI/BOOT/BOOTX64.EFI', fs='Installer'), 'uefi')
+        self.assertEqual(self.match(path='/EFI/BOOT/BOOTX64.EFI', fs='NOTVTOYEFI'), 'uefi')
+        self.assertEqual(self.match(path='/EFI/Microsoft/Boot/bootmgfw.efi', fs='VTOYEFI'), 'windows')
+
     def test_generated_table_is_current(self):
         subprocess.run([os.sys.executable, str(ROOT / 'tools/generate_registry.py'), '--check'], check=True)
 

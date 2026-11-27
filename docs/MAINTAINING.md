@@ -16,6 +16,10 @@
 
 ## 新增系统
 
+Ventoy 图标使用长方形大圆角 U 盘外壳、USB 插头和「V」，主键为 `ventoy`，兼容 `vtoyefi` 和 `vtoy`。通过 `VTOYEFI` 卷标或专用 `ventoy_*.efi` 文件识别；通用 `BOOTX64.EFI` 不单独判定为 Ventoy。
+
+Ventoy uses a USB drive with a rectangular body, large rounded corners, a connector and a V, keyed as `ventoy` with `vtoyefi` and `vtoy` aliases. Detection uses the `VTOYEFI` label or dedicated `ventoy_*.efi` filenames; a generic `BOOTX64.EFI` alone is insufficient.
+
 1. 在目录中复制结构相近的条目，使用唯一小写 ID 和图标键。标题尽量短。`parent` 用于共用目录的衍生系统，不代表可以无证据自动判断版本。
 2. 添加有来源和许可的素材；记录仓库、固定提交及源链接。没有可靠素材时使用 `asset: null`、`source: local-wordmark` 和 `wordmark`；共用父标志应标 `parent-mark` / `shared_with`。
 3. `directories` 只填完整目录段；`release_ids` 对应 `os-release` 的 ID，`release_variants` 为 `ID:VARIANT_ID`；`labels` 为人工名称线索；通用 GRUB/shim 文件名仅给低权重通用识别。不要把短词加入宽泛子串匹配。

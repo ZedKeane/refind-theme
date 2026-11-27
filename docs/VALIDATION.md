@@ -1,17 +1,17 @@
 # 验证记录 / Validation
 
-项目版本：0.2.2；配套程序：rEFInd 0.14.2-minimal0.2.2；系统目录：130 条、154 个系统图标文件名；界面目录：127 组中英文文字。
+项目版本：0.2.3；配套程序：rEFInd 0.14.2-minimal0.2.3；系统目录：130 条、156 个系统图标文件名；界面目录：127 组中英文文字。
 
-Project version: 0.2.2. Application: rEFInd 0.14.2-minimal0.2.2. The catalog contains 130 entries and 154 system icon filenames; the interface catalog contains 127 translation pairs.
+Project version: 0.2.3. Application: rEFInd 0.14.2-minimal0.2.3. The catalog contains 130 entries and 156 system icon filenames; the interface catalog contains 127 translation pairs.
 
 ## 构建与检查 / Build and checks
 
-- 15 项宿主测试通过，覆盖登记 ID、目录、标题、共用目录、版本提示、中文别名、词边界、os-release 异常输入、磁盘名称、安装与回滚、配置保留及语言切换。双语测试重复切换全部字符串，检查静态菜单引用地址不变和 UTF-16 文字完整。
+- 16 项宿主测试通过，覆盖登记 ID、目录、标题、共用目录、版本提示、中文别名、词边界、os-release 异常输入、磁盘名称、安装与回滚、配置保留及语言切换。双语测试重复切换全部字符串，检查静态菜单引用地址不变和 UTF-16 文字完整。
 - 完整 x86_64 程序构建通过：macOS、Zig 0.13.0、GNU-EFI 3.0.18 SysV 包装调用及 GNU objcopy。上游代码保留既有编译警告；共享模块通过宿主 `-Wall -Wextra -Werror` 检查。
 - 代码与配置的注释扫描通过；第三方声明保存在独立许可证目录。非界面修改的上游 C 文件与清理前进行词法比较，确认只改变注释和空白。
 - ZIP 校验通过，逐文件 SHA-256 一致。发行 PNG 不含元数据，ZIP 使用固定时间戳，不包含开发目录、个人机器路径、AI 署名和原始字体文件。
 
-All 15 host tests pass, including registry matching, malformed os-release input, disk model extraction, installation and rollback, configuration preservation and repeated language switching with stable menu pointers. The complete x86_64 application builds successfully. Comment and source-token checks pass. ZIP CRCs, file checksums and metadata checks pass.
+All 16 host tests pass, including registry matching, malformed os-release input, disk model extraction, installation and rollback, configuration preservation and repeated language switching with stable menu pointers. The complete x86_64 application builds successfully. Comment and source-token checks pass. ZIP CRCs, file checksums and metadata checks pass.
 
 ## 图形与语言 / Graphics and languages
 

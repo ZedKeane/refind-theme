@@ -1,8 +1,8 @@
 # Build / 构建
 
-纯白背景、纯黑图标、居中布局的 rEFInd 主题包，提供可切换的中文和英文界面。包含 130 个系统、版本及启动工具条目，154 个系统图标文件名。OpenCore 识别为 macOS，使用苹果图标。
+纯白背景、纯黑图标、居中布局的 rEFInd 主题包，提供可切换的中文和英文界面。包含 130 个系统、版本及启动工具条目，156 个系统图标文件名。OpenCore 识别为 macOS，使用苹果图标。
 
-A white rEFInd theme with black icons, centered text and switchable Chinese/English interfaces. Includes 130 system, version and boot-tool entries and 154 system icon filenames. OpenCore is recognized as macOS and uses the Apple icon.
+A white rEFInd theme with black icons, centered text and switchable Chinese/English interfaces. Includes 130 system, version and boot-tool entries and 156 system icon filenames. OpenCore is recognized as macOS and uses the Apple icon.
 
 安装与语言切换见 [主题包说明 / Installation and language selection](docs/PACKAGE.md)。完整菜单语言、动态倒计时、系统识别和磁盘来源功能使用配套程序；`theme.conf` 提供原版 rEFInd 兼容模式。
 

@@ -126,7 +126,7 @@
 | OpenIndiana | openindiana | EFI目录: openindiana; ID: openindiana; 名称: OpenIndiana, Open Indiana | local-wordmark |
 | OmniOS | omnios | EFI目录: omnios; ID: omnios; 名称: OmniOS, Omni OS | local-wordmark |
 | Oracle Solaris | solaris | EFI目录: solaris; 名称: Oracle Solaris, solaris | dashboard-icons |
-| Ventoy | ventoy | EFI目录: ventoy; 名称: Ventoy, VTOYEFI | local-wordmark |
+| Ventoy | ventoy | EFI目录: ventoy; 文件名: ventoy_x64.efi, ventoy_ia32.efi, ventoy_aa64.efi, ventoy_mips64.efi; 名称: Ventoy, VTOYEFI | local-geometric |
 | rEFInd | refind | EFI目录: refind; 文件名: refind_x64.efi, refind_aa64.efi; 名称: rEFInd | minimal |
 | Clover | clover | EFI目录: clover; 文件名: CLOVERX64.efi; 名称: Clover, Clover EFI | refind |
 | systemd boot | systemd | EFI目录: systemd; 文件名: systemd-bootx64.efi, systemd-bootaa64.efi; 名称: systemd boot, systemd | refind |
