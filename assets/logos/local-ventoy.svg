@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="#000">
-  <path fill-rule="evenodd" d="M64 5h32a4 4 0 0 1 4 4v39H60V9a4 4 0 0 1 4-4Zm5 10v13h7V15Zm15 0v13h7V15Z"/>
-  <path fill-rule="evenodd" d="M60 42h40a22 22 0 0 1 22 22v65a22 22 0 0 1-22 22H60a22 22 0 0 1-22-22V64a22 22 0 0 1 22-22Zm-1 33 16 38a5.5 5.5 0 0 0 10 0l16-38H90l-10 25-10-25Z"/>
+  <g transform="rotate(40 80 80)">
+    <path fill-rule="evenodd" d="M65 7h30a4 4 0 0 1 4 4v34H61V11a4 4 0 0 1 4-4Zm5 9v12h7V16Zm13 0v12h7V16Z"/>
+    <path fill-rule="evenodd" d="M59 42h42a12 12 0 0 1 12 12v68a24 24 0 0 1-13 21l-16 8a9 9 0 0 1-8 0l-16-8a24 24 0 0 1-13-21V54a12 12 0 0 1 12-12Zm2 23 15 39a4 4 0 0 0 8 0l15-39h-9l-10 28-10-28Z"/>
+  </g>
 </svg>
